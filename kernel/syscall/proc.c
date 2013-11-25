@@ -56,9 +56,9 @@ int task_create_syscall(task_t* tasks, size_t num_tasks)
 	uint32_t tmp1;
 	uint32_t tmp2;
 	float sum = 0;
+
 	if (num_tasks > OS_MAX_TASKS)
 		return EINVAL;
-
 	for (i = 0; i < num_tasks; i++)
 	{	
 		tmp1 = (uint32_t)tasks[i].stack_pos;
@@ -76,9 +76,8 @@ int task_create_syscall(task_t* tasks, size_t num_tasks)
 	}
 	
 	/* test whether task set is schedulable */
-	if (sum > 1)		
+	if (sum > 1)
 		return ESCHED;
-	
 	for (i = 0; i < num_tasks; i++) {
 		min = i;
 		for (j = i+1; j < num_tasks; j++ ) {
