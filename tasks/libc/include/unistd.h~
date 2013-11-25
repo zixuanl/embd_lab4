@@ -12,11 +12,76 @@
 #include <bits/fileno.h>
 #include <sys/types.h>
 
-#define NUM_DEVICES 4
-#define PERIOD_DEV0 50
-#define PERIOD_DEV1 100
-#define PERIOD_DEV2 200
-#define PERIOD_DEV3 500
+
+#ifndef _DEV_PARAMETER
+#define _DEV_PARAMETER
+
+#define NUM_DEVICES 63
+#define PERIOD_DEV0 100
+#define PERIOD_DEV1 200
+#define PERIOD_DEV2 500
+#define PERIOD_DEV3 50
+#define PERIOD_DEV4 250
+#define PERIOD_DEV5 300
+#define PERIOD_DEV6 350
+#define PERIOD_DEV7 400
+#define PERIOD_DEV8 450
+#define PERIOD_DEV9 150
+#define PERIOD_DEV10 550
+#define PERIOD_DEV11 600
+#define PERIOD_DEV12 650
+#define PERIOD_DEV13 700
+#define PERIOD_DEV14 750
+#define PERIOD_DEV15 800
+#define PERIOD_DEV16 850
+#define PERIOD_DEV17 900
+#define PERIOD_DEV18 950
+#define PERIOD_DEV19 1000
+#define PERIOD_DEV20 1050
+#define PERIOD_DEV21 1100
+#define PERIOD_DEV22 1150
+#define PERIOD_DEV23 1200
+#define PERIOD_DEV24 1250
+#define PERIOD_DEV25 1300
+#define PERIOD_DEV26 1350
+#define PERIOD_DEV27 1400
+#define PERIOD_DEV28 1450
+#define PERIOD_DEV29 1500
+#define PERIOD_DEV30 1550
+#define PERIOD_DEV31 1600
+#define PERIOD_DEV32 1650
+#define PERIOD_DEV33 1700
+#define PERIOD_DEV34 1750
+#define PERIOD_DEV35 1800
+#define PERIOD_DEV36 1850
+#define PERIOD_DEV37 1900
+#define PERIOD_DEV38 1950
+#define PERIOD_DEV39 2000
+#define PERIOD_DEV40 2050
+#define PERIOD_DEV41 2100
+#define PERIOD_DEV42 2150
+#define PERIOD_DEV43 2200
+#define PERIOD_DEV44 2250
+#define PERIOD_DEV45 2300
+#define PERIOD_DEV46 2350
+#define PERIOD_DEV47 2400
+#define PERIOD_DEV48 2450
+#define PERIOD_DEV49 2500
+#define PERIOD_DEV50 2550
+#define PERIOD_DEV51 2600
+#define PERIOD_DEV52 2650
+#define PERIOD_DEV53 2700
+#define PERIOD_DEV54 2750
+#define PERIOD_DEV55 2800
+#define PERIOD_DEV56 2850
+#define PERIOD_DEV57 2900
+#define PERIOD_DEV58 2950
+#define PERIOD_DEV59 3000
+#define PERIOD_DEV60 3050
+#define PERIOD_DEV61 3100
+#define PERIOD_DEV62 3150
+
+#endif // _DEV_PARAMETER
 
 ssize_t read(int fd, void *buf, size_t count);
 ssize_t write(int fd, const void *buf, size_t count);

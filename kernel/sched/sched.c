@@ -21,9 +21,23 @@
 
 tcb_t system_tcb[OS_MAX_TASKS]; /*allocate memory for system TCBs */
 
-void sched_init(task_t* main_task  __attribute__((unused)))
+void sched_init()
 {
-	
+	unsigned int index;
+	for  (index = 0; index < OS_MAX_TASKS; index++) {
+		system_tcb[index].native_prio = 0;
+		system_tcb[index].cur_prio = 0;
+		system_tcb[index].context.r4 = 0;
+		system_tcb[index].context.r5 = 0;
+		system_tcb[index].context.r6 = 0;
+		system_tcb[index].context.r7 = 0;
+		system_tcb[index].context.r8 = 0;
+		system_tcb[index].context.r9 = 0;
+		system_tcb[index].context.r10 = 0;
+		system_tcb[index].context.r11 = 0;
+		system_tcb[index].context.sp = (void *)0;
+		system_tcb[index].context.lr = (void *)0;
+	}
 }
 
 /**
@@ -53,6 +67,7 @@ void allocate_tasks(task_t** tasks  __attribute__((unused)), size_t num_tasks  _
 {
 	//puts("allocate_tasks\n");
 	runqueue_init();
+	sched_init();
 
 	unsigned int index;
 	for  (index = 0; index < num_tasks; index++) {

@@ -23,7 +23,21 @@ tcb_t system_tcb[OS_MAX_TASKS]; /*allocate memory for system TCBs */
 
 void sched_init(task_t* main_task  __attribute__((unused)))
 {
-	
+	unsigned int index;
+	for  (index = 0; index < OS_MAX_TASKS; index++) {
+		system_tcb[index].native_prio = 0;
+		system_tcb[index].cur_prio = 0;
+		system_tcb[index].context.r4 = 0;
+		system_tcb[index].context.r5 = 0;
+		system_tcb[index].context.r6 = 0;
+		system_tcb[index].context.r7 = 0;
+		system_tcb[index].context.r8 = 0;
+		system_tcb[index].context.r9 = 0;
+		system_tcb[index].context.r10 = 0;
+		system_tcb[index].context.r11 = 0;
+		system_tcb[index].context.sp = (void *)0;
+		system_tcb[index].context.lr = (void *)0;
+	}
 }
 
 /**
@@ -51,8 +65,9 @@ static void __attribute__((unused)) idle(void)
  */
 void allocate_tasks(task_t** tasks  __attribute__((unused)), size_t num_tasks  __attribute__((unused)))
 {
-	puts("allocate_tasks\n");
+	//puts("allocate_tasks\n");
 	runqueue_init();
+	sched_init();
 
 	unsigned int index;
 	for  (index = 0; index < num_tasks; index++) {
@@ -68,11 +83,13 @@ void allocate_tasks(task_t** tasks  __attribute__((unused)), size_t num_tasks  _
 		system_tcb[index].context.r11 = 0;
 		system_tcb[index].context.sp = (void *)(0xa3800000 + index * 0x1000);
 		system_tcb[index].context.lr = (void *)launch_task;
+/*
 		printf("r4: %x\n", system_tcb[index].context.r4);
 		printf("r5: %x\n", system_tcb[index].context.r5);
 		printf("r6: %x\n", system_tcb[index].context.r6);
 		printf("sp: %x\n", (uint32_t) system_tcb[index].context.sp);
 		printf("lr: %x\n", (uint32_t) system_tcb[index].context.lr);
+*/
 		runqueue_add(&system_tcb[index], system_tcb[index].native_prio);
 	}
 
@@ -88,11 +105,13 @@ void allocate_tasks(task_t** tasks  __attribute__((unused)), size_t num_tasks  _
 	system_tcb[IDLE_PRIO].context.r11 = 0;
 	system_tcb[IDLE_PRIO].context.sp = (void *)(0xa3800000 + IDLE_PRIO * 0x1000);
 	system_tcb[IDLE_PRIO].context.lr = (void *)launch_task;
+/*
 		printf("r4: %x\n", system_tcb[IDLE_PRIO].context.r4);
 		printf("r5: %x\n", system_tcb[IDLE_PRIO].context.r5);
 		printf("r6: %x\n", system_tcb[IDLE_PRIO].context.r6);
 		printf("sp: %x\n", (uint32_t) system_tcb[IDLE_PRIO].context.sp);
 		printf("lr: %x\n", (uint32_t) system_tcb[IDLE_PRIO].context.lr);
+*/
 	runqueue_add(&system_tcb[IDLE_PRIO], system_tcb[IDLE_PRIO].native_prio);
 	
 	dispatch_init(&system_tcb[IDLE_PRIO]);

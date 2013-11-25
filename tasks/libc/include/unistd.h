@@ -12,17 +12,21 @@
 #include <bits/fileno.h>
 #include <sys/types.h>
 
-#define NUM_DEVICES 4
-#define PERIOD_DEV0 50
-#define PERIOD_DEV1 100
-#define PERIOD_DEV2 150
-#define PERIOD_DEV3 200
+
+#ifndef _DEV_PARAMETER
+#define _DEV_PARAMETER
+
+#define NUM_DEVICES 63
+#define PERIOD_DEV0 100
+#define PERIOD_DEV1 200
+#define PERIOD_DEV2 500
+#define PERIOD_DEV3 50
 #define PERIOD_DEV4 250
 #define PERIOD_DEV5 300
 #define PERIOD_DEV6 350
 #define PERIOD_DEV7 400
 #define PERIOD_DEV8 450
-#define PERIOD_DEV9 500
+#define PERIOD_DEV9 150
 #define PERIOD_DEV10 550
 #define PERIOD_DEV11 600
 #define PERIOD_DEV12 650
@@ -77,13 +81,21 @@
 #define PERIOD_DEV61 3100
 #define PERIOD_DEV62 3150
 
+#endif // _DEV_PARAMETER
+
+
+
 ssize_t read(int fd, void *buf, size_t count);
 ssize_t write(int fd, const void *buf, size_t count);
 unsigned long time(void);
 void sleep(unsigned long millis);
 int event_wait(unsigned int dev);
+
+#ifndef _LOCK_H
+#define _LOCK_H
 int mutex_create(void);
 int mutex_lock(int mutex);
 int mutex_unlock(int mutex);
+#endif // _LOCK_H
 
 #endif /* UNISTD_H */
