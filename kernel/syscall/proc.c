@@ -2,11 +2,10 @@
  * 
  * @brief Implementation of `process' syscalls
  *
- * @author Mike Kasick <mkasick@andrew.cmu.edu>
- * @date   Sun, 14 Oct 2007 00:07:38 -0400
- *
- * @author Kartik Subramanian <ksubrama@andrew.cmu.edu>
- * @date 2008-11-12
+ * Authors: Tianyi Huang <tianyih@andrew.cmu.edu>
+ *          Zixuan Liu <zixuanl@andrew.cmu.edu>
+ *	    Jianan Lu <jiananl@andrew.cmu.edu>
+ * Date:    11/23/2013
  */
 
 #include <exports.h>
@@ -24,8 +23,12 @@
 #include <device.h>
 #include <task.h>
 
-void task_exchange (task_t * task1,task_t * task2) 
+/* func: task_exchange
+ * 	 used as a helper to swap two tasks in the tasks[], in order to sort the tasks 
+ */
+void task_exchange (task_t * task1, task_t * task2) 
 {
+	// tmp acts as an intermediate 
 	task_t tmp_task;
 
 	tmp_task.lambda = task1->lambda;
@@ -34,6 +37,7 @@ void task_exchange (task_t * task1,task_t * task2)
 	tmp_task.C = task1->C;
 	tmp_task.T = task1->T;
 
+	// swap task 1 and task 2
 	task1->lambda = task2->lambda;
 	task1->data = task2->data;
 	task1->stack_pos = task2->stack_pos;
@@ -50,19 +54,22 @@ void task_exchange (task_t * task1,task_t * task2)
 
 int task_create_syscall(task_t* tasks, size_t num_tasks)
 {
-	//puts("in task_create\n");
 	size_t i, j;
 	size_t min;
 	uint32_t tmp1;
 	uint32_t tmp2;
 	float sum = 0;
-
+	
+	// error checking for num_tasks
 	if (num_tasks > OS_MAX_TASKS)
 		return EINVAL;
+
+	// test func addr and stack addr
 	for (i = 0; i < num_tasks; i++)
 	{	
 		tmp1 = (uint32_t)tasks[i].stack_pos;
 		tmp2 = (uint32_t)tasks[i].lambda;
+
 		/* check the user_stack position and task_fun address 
 		 * leave the first 0x10000 for user program
 		 * a valid stack position should be between 0xa0010000 and 0xa3000000
@@ -78,6 +85,8 @@ int task_create_syscall(task_t* tasks, size_t num_tasks)
 	/* test whether task set is schedulable */
 	if (sum > 1)
 		return ESCHED;
+
+	// sort tasks according to their freq
 	for (i = 0; i < num_tasks; i++) {
 		min = i;
 		for (j = i+1; j < num_tasks; j++ ) {
@@ -86,24 +95,29 @@ int task_create_syscall(task_t* tasks, size_t num_tasks)
 		}
 		task_exchange(&tasks[i], &tasks[min]);
 	}
-	/*
-	for (i = 0; i < num_tasks; i++) {
-		printf("%lu\n", tasks[i].T);
 
-	}
-	*/
+	// init devices
 	dev_init();
+
+	// construct tcbs
 	allocate_tasks(&tasks, num_tasks);
+
+	// upon success, it will not return 
 	return 1;
 }
 
 int event_wait_syscall(unsigned int dev)
 {
+	// test if dev number is valid
 	if (dev > 3) {
 		return EINVAL;
 	}
+	
+	// wait for device
 	dev_wait(dev);
-	return 1;
+
+	// if success, return 0 
+	return 0;
 }
 
 /* An invalid syscall causes the kernel to exit. */

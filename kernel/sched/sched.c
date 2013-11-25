@@ -2,8 +2,11 @@
  * 
  * @brief Top level implementation of the scheduler.
  *
- * @author Kartik Subramanian <ksubrama@andrew.cmu.edu>
- * @date 2008-11-20
+ * Authors: Tianyi Huang <tianyih@andrew.cmu.edu>
+ *          Zixuan Liu <zixuanl@andrew.cmu.edu>
+ *	    Jianan Lu <jiananl@andrew.cmu.edu>
+ * Date:    11/23/2013
+ *
  */
 #include <exports.h>
 
@@ -21,9 +24,11 @@
 
 tcb_t system_tcb[OS_MAX_TASKS]; /*allocate memory for system TCBs */
 
+// init system_tcb, set all values to be zero
 void sched_init()
 {
 	unsigned int index;
+	// clear system_tcb by setting all values to be zero
 	for  (index = 0; index < OS_MAX_TASKS; index++) {
 		system_tcb[index].native_prio = 0;
 		system_tcb[index].cur_prio = 0;
@@ -43,7 +48,6 @@ void sched_init()
 /**
  * @brief This is the idle task that the system runs when no other task is runnable
  */
- 
 static void __attribute__((unused)) idle(void)
 {
 	 enable_interrupts();
@@ -66,9 +70,14 @@ static void __attribute__((unused)) idle(void)
 void allocate_tasks(task_t** tasks  __attribute__((unused)), size_t num_tasks  __attribute__((unused)))
 {
 	//puts("allocate_tasks\n");
+	
+	// init runqueue
 	runqueue_init();
+	
+	// every time we enter allocate_tasks, clear all the current tasks 
 	sched_init();
 
+	// set system_tcb according to the new tasks
 	unsigned int index;
 	for  (index = 0; index < num_tasks; index++) {
 		system_tcb[index].native_prio = index;
@@ -83,16 +92,12 @@ void allocate_tasks(task_t** tasks  __attribute__((unused)), size_t num_tasks  _
 		system_tcb[index].context.r11 = 0;
 		system_tcb[index].context.sp = (void *)(0xa3800000 + index * 0x1000);
 		system_tcb[index].context.lr = (void *)launch_task;
-/*
-		printf("r4: %x\n", system_tcb[index].context.r4);
-		printf("r5: %x\n", system_tcb[index].context.r5);
-		printf("r6: %x\n", system_tcb[index].context.r6);
-		printf("sp: %x\n", (uint32_t) system_tcb[index].context.sp);
-		printf("lr: %x\n", (uint32_t) system_tcb[index].context.lr);
-*/
+
+		// after set up a tcb, add it into the runqueue
 		runqueue_add(&system_tcb[index], system_tcb[index].native_prio);
 	}
 
+	// after setting up tasks specified by user program, set the idle task
 	system_tcb[IDLE_PRIO].native_prio = IDLE_PRIO;
 	system_tcb[IDLE_PRIO].cur_prio = IDLE_PRIO;
 	system_tcb[IDLE_PRIO].context.r4 = (uint32_t) idle;
@@ -105,16 +110,14 @@ void allocate_tasks(task_t** tasks  __attribute__((unused)), size_t num_tasks  _
 	system_tcb[IDLE_PRIO].context.r11 = 0;
 	system_tcb[IDLE_PRIO].context.sp = (void *)(0xa3800000 + IDLE_PRIO * 0x1000);
 	system_tcb[IDLE_PRIO].context.lr = (void *)launch_task;
-/*
-		printf("r4: %x\n", system_tcb[IDLE_PRIO].context.r4);
-		printf("r5: %x\n", system_tcb[IDLE_PRIO].context.r5);
-		printf("r6: %x\n", system_tcb[IDLE_PRIO].context.r6);
-		printf("sp: %x\n", (uint32_t) system_tcb[IDLE_PRIO].context.sp);
-		printf("lr: %x\n", (uint32_t) system_tcb[IDLE_PRIO].context.lr);
-*/
+
+	// add the idle task into the runqueue
 	runqueue_add(&system_tcb[IDLE_PRIO], system_tcb[IDLE_PRIO].native_prio);
 	
+	// Initialize the current TCB and priority, which is idle
 	dispatch_init(&system_tcb[IDLE_PRIO]);
+
+	// switch to and execute a task
 	dispatch_nosave();
 }
 

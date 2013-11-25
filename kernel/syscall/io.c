@@ -1,12 +1,9 @@
-/** @file io.c
+/* io.c: io system calls. 
  *
- * @brief Kernel I/O syscall implementations
- *
- * @author Mike Kasick <mkasick@andrew.cmu.edu>
- * @date   Sun, 14 Oct 2007 00:07:38 -0400
- *
- * @author Kartik Subramanian <ksubrama@andrew.cmu.edu>
- * @date   2008-11-16
+ * Authors: Tianyi Huang <tianyih@andrew.cmu.edu>
+ *          Zixuan Liu <zixuanl@andrew.cmu.edu>
+ *	    Jianan Lu <jiananl@andrew.cmu.edu>
+ * Date:    11/20/2013
  */
 
 #include <types.h>

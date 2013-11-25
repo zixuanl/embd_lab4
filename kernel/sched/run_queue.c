@@ -2,8 +2,10 @@
  * 
  * @brief Run queue maintainence routines.
  *
- * @author Kartik Subramanian <ksubrama@andrew.cmu.edu>
- * @date 2008-11-21
+ * Authors: Tianyi Huang <tianyih@andrew.cmu.edu>
+ *          Zixuan Liu <zixuanl@andrew.cmu.edu>
+ *	    Jianan Lu <jiananl@andrew.cmu.edu>
+ * Date:    11/23/2013
  */
 
 #include <types.h>
@@ -58,7 +60,6 @@ static uint8_t prio_unmap_table[]  __attribute__((unused)) =
  */
 void runqueue_init(void)
 {
-	//puts("runqueue_init\n");
 	// clear group_run_bits and run_bits
 	group_run_bits = 0;
 
@@ -84,7 +85,6 @@ void runqueue_init(void)
  */
 void runqueue_add(tcb_t* tcb  __attribute__((unused)), uint8_t prio  __attribute__((unused)))
 {
-	//printf("runqueue_add, prio: %d\n", (int)prio);
 	// set group_run_bits and run_bits
 	uint8_t OSTCBY = (prio >> 3) & 0x07;
 	uint8_t OSTCBX = prio & 0x07;
@@ -93,16 +93,7 @@ void runqueue_add(tcb_t* tcb  __attribute__((unused)), uint8_t prio  __attribute
 	run_bits[OSTCBY] = run_bits[OSTCBY] | (1 << OSTCBX);
 	
 	// insert it to the corresponding runqueue
-	//tcb_t *oldheader = run_list[prio];
-	run_list[prio] = tcb;
-	//tcb. = oldheader;
-	/*
-	printf("x: %d\n", OSTCBX);
-	printf("y: %d\n", OSTCBY);
-	printf("run_bits[0]: %d\n", run_bits[0]);
-	printf("run_bits[7]: %d\n", run_bits[7]);
-	*/
-	
+	run_list[prio] = tcb;	
 }
 
 
@@ -115,7 +106,6 @@ void runqueue_add(tcb_t* tcb  __attribute__((unused)), uint8_t prio  __attribute
  */
 tcb_t* runqueue_remove(uint8_t prio  __attribute__((unused)))
 {
-	//puts("runqueue_remove\n");
 	tcb_t *tcb = run_list[prio];
 	run_list[prio] = (void *)0;
 
@@ -125,12 +115,7 @@ tcb_t* runqueue_remove(uint8_t prio  __attribute__((unused)))
 	if (run_bits[OSTCBY] == 0) {
 		group_run_bits = group_run_bits & (~(1 << OSTCBY));
 	}
-/*
-	printf("x: %d\n", OSTCBX);
-	printf("y: %d\n", OSTCBY);
-	printf("run_bits[0]: %d\n", run_bits[0]);
-	printf("run_bits[7]: %d\n", run_bits[7]);
-*/
+
 	return tcb; // fix this; dummy return to prevent warning messages	
 }
 
@@ -140,7 +125,6 @@ tcb_t* runqueue_remove(uint8_t prio  __attribute__((unused)))
  */
 uint8_t highest_prio(void)
 {
-	//puts("highest_prio\n");
 	uint8_t prio;
 	uint8_t x,y;
 	y = prio_unmap_table[group_run_bits];

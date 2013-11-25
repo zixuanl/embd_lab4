@@ -86,7 +86,34 @@ ssize_t read_syscall(int fd __attribute__((unused)), char *buf __attribute__((un
 ssize_t write_syscall(int fd  __attribute__((unused)), const char *buf  __attribute__((unused)), size_t count  __attribute__((unused)))
 {
 
-  return 1; /* remove this return line after you have added your code here */
+  // Check if it is writing to the STDOUT
+	if (fd != STDOUT_FILENO) {
+                return -EBADF;  
+	}
+
+	// Check if the range of the buffer exits out side the range of readable memory (StrataFlash ROM or SDRAM)
+	if (buf < (char *)LEGEL_MEM_START_ADDR || (buf + count) > (char *)LEGEL_MEM_END_ADDR)
+		return -EFAULT;
+	
+	// Check if the range of the buffer exits in some readable memory that is not readable by a user application, namely abort stack and supervisor stack
+	if ((buf < (char *)ABORT_STACK_END_ADDR && (buf + count) > (char *)ABORT_STACK_END_ADDR) || (buf < (char *)KERNEL_START_ADDR && (buf+count) > (char *)KERNEL_START_ADDR))
+		return -EFAULT;
+
+	uint32_t i;
+	// Check if the last character is a carriage return; if so, print an newline instead in the last
+	if(buf[count-1]=='\r')
+	{
+		for(i = 0; i < (count-1); i++)
+			putc(buf[i]);
+		printf("\n");
+	}
+	// Writing to the STDOUT from buf
+	else
+	{
+		for(i = 0; i < count; i++)
+			putc(buf[i]);
+	}
+	return count;
 	
 }
 

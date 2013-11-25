@@ -78,7 +78,7 @@ void dev_wait(unsigned int dev)
 		}
 		if((*tmp)->sleep_queue == (void *)0) {
 			(*tmp)->sleep_queue = runqueue_remove(get_cur_prio());
-			((*tmp)->sleep_queue) = (void *)0;
+			((*tmp)->sleep_queue)->sleep_queue = (void *)0;
 			break;
 		}
 		tmp = (tcb_t **)&((*tmp)->sleep_queue);

@@ -2,8 +2,11 @@
  * 
  * @brief Top level implementation of the scheduler.
  *
- * @author Kartik Subramanian <ksubrama@andrew.cmu.edu>
- * @date 2008-11-20
+ * Authors: Tianyi Huang <tianyih@andrew.cmu.edu>
+ *          Zixuan Liu <zixuanl@andrew.cmu.edu>
+ *	    Jianan Lu <jiananl@andrew.cmu.edu>
+ * Date:    11/23/2013
+ *
  */
 #include <exports.h>
 
@@ -21,7 +24,7 @@
 
 tcb_t system_tcb[OS_MAX_TASKS]; /*allocate memory for system TCBs */
 
-void sched_init(task_t* main_task  __attribute__((unused)))
+void sched_init()
 {
 	unsigned int index;
 	for  (index = 0; index < OS_MAX_TASKS; index++) {

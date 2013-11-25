@@ -1,5 +1,5 @@
 /* 
- * sys.c: handling system calls. 
+ * sys.c: dispatch system calls. 
  *
  * Authors: Tianyi Huang <tianyih@andrew.cmu.edu>
  *          Zixuan Liu <zixuanl@andrew.cmu.edu>
@@ -44,8 +44,11 @@ int getSWI(int num, int *sp) {
 			return mutex_lock_syscall((int) (*sp));
 		case MUTEX_UNLOCK:
 			return mutex_unlock_syscall((int) (*sp));
+
+		// invalid syscall
 		default:
-			break; //take into account invalid syscalls
+			invalid_syscall((unsigned int) num);
+			break; 
 	}
 	return 0;
 }

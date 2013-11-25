@@ -2,11 +2,10 @@
  * 
  * @brief Implementation of `process' syscalls
  *
- * @author Mike Kasick <mkasick@andrew.cmu.edu>
- * @date   Sun, 14 Oct 2007 00:07:38 -0400
- *
- * @author Kartik Subramanian <ksubrama@andrew.cmu.edu>
- * @date 2008-11-12
+ * Authors: Tianyi Huang <tianyih@andrew.cmu.edu>
+ *          Zixuan Liu <zixuanl@andrew.cmu.edu>
+ *	    Jianan Lu <jiananl@andrew.cmu.edu>
+ * Date:    11/23/2013
  */
 
 #include <exports.h>
@@ -24,8 +23,12 @@
 #include <device.h>
 #include <task.h>
 
-void task_exchange (task_t * task1,task_t * task2) 
+/* func: task_exchange
+ * 	 used as a helper to swap two tasks in the tasks[], in order to sort the tasks 
+ */
+void task_exchange (task_t * task1, task_t * task2) 
 {
+	// tmp acts as an intermediate 
 	task_t tmp_task;
 
 	tmp_task.lambda = task1->lambda;
@@ -34,6 +37,7 @@ void task_exchange (task_t * task1,task_t * task2)
 	tmp_task.C = task1->C;
 	tmp_task.T = task1->T;
 
+	// swap task 1 and task 2
 	task1->lambda = task2->lambda;
 	task1->data = task2->data;
 	task1->stack_pos = task2->stack_pos;
@@ -56,9 +60,9 @@ int task_create_syscall(task_t* tasks, size_t num_tasks)
 	uint32_t tmp1;
 	uint32_t tmp2;
 	float sum = 0;
+
 	if (num_tasks > OS_MAX_TASKS)
 		return EINVAL;
-
 	for (i = 0; i < num_tasks; i++)
 	{	
 		tmp1 = (uint32_t)tasks[i].stack_pos;
@@ -76,9 +80,8 @@ int task_create_syscall(task_t* tasks, size_t num_tasks)
 	}
 	
 	/* test whether task set is schedulable */
-	if (sum > 1)		
+	if (sum > 1)
 		return ESCHED;
-	
 	for (i = 0; i < num_tasks; i++) {
 		min = i;
 		for (j = i+1; j < num_tasks; j++ ) {
@@ -100,6 +103,9 @@ int task_create_syscall(task_t* tasks, size_t num_tasks)
 
 int event_wait_syscall(unsigned int dev)
 {
+	if (dev > 3) {
+		return EINVAL;
+	}
 	dev_wait(dev);
 	return 1;
 }

@@ -2,8 +2,10 @@
 *
 * @brief C wrappers around assembly context switch routines.
 *
-* @author Kartik Subramanian <ksubrama@andrew.cmu.edu>
-* @date 2008-11-21
+ * Authors: Tianyi Huang <tianyih@andrew.cmu.edu>
+ *          Zixuan Liu <zixuanl@andrew.cmu.edu>
+ *	    Jianan Lu <jiananl@andrew.cmu.edu>
+ * Date:    11/23/2013
 */
  
 
@@ -42,11 +44,13 @@ void dispatch_init(tcb_t* idle __attribute__((unused)))
 */
 void dispatch_save(void)
 {
-	puts("dispatch_save\n");
+	// use temp to store the current tcb and then update cur_tcb
         tcb_t* temp_tcb = cur_tcb;
         tcb_t* highest_tcb;
         highest_tcb = &system_tcb[highest_prio()];                                /*get the task of the highest priority*/
         cur_tcb = highest_tcb;                                                        /*get the current task*/
+
+	// content switch to the highest priority task and save the current one 
         ctx_switch_full(&(highest_tcb->context), &(temp_tcb->context));                /*switch context*/
 }
 
@@ -58,16 +62,13 @@ void dispatch_save(void)
 */
 void dispatch_nosave(void)
 {
-        puts("dispatch_nosave\n");
+        // get highest prio task and update cur_tcb
 	tcb_t* highest_tcb;
         highest_tcb = &system_tcb[highest_prio()];                                /*get the task of the highest priority*/
         cur_tcb = highest_tcb;
 
-	printf("%d\n",cur_tcb->native_prio);
-	printf("tcb addr: %x\n", (int)cur_tcb);
-
+	// content switch to the highest priority task without saving the current one
         ctx_switch_half(&(highest_tcb->context));                                /*switch context*/
-	puts("nosave complete\n");
 }
 
 
@@ -79,15 +80,12 @@ void dispatch_nosave(void)
 */
 void dispatch_sleep(void)
 {
-	puts("dispatch_sleep\n");
         tcb_t* temp_tcb = cur_tcb;
         tcb_t* highest_tcb;
         highest_tcb = &system_tcb[highest_prio()];                                /*get the task of the highest priority*/
         cur_tcb = highest_tcb;                                                        /*get the current task*/
 
-	printf("%d\n",cur_tcb->native_prio);
-	printf("tcb addr: %x\n", (int)cur_tcb);
-
+	// content switch to the highest priority task and save the current one
         ctx_switch_full(&(highest_tcb->context), &(temp_tcb->context));                /*switch context*/
 }
 
@@ -97,7 +95,6 @@ void dispatch_sleep(void)
 uint8_t get_cur_prio(void)
 {
         return cur_tcb->native_prio;
-        //return 1; //fix this; dummy return to prevent compiler warning
 }
 
 /**

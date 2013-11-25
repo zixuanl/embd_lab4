@@ -6,8 +6,10 @@
  * no co-processor registers and that the caller is in SVC mode. Furthermore,
  * the SPSR is considered a spare/scratch register and hence, is not saved.
  *
- * @author Kartik Subramanian
- * @date 2008-11-21
+ * Authors: Tianyi Huang <tianyih@andrew.cmu.edu>
+ *          Zixuan Liu <zixuanl@andrew.cmu.edu>
+ *	    Jianan Lu <jiananl@andrew.cmu.edu>
+ * Date:    11/23/2013
  */
 
         .file "ctx_switch_asm.S"
@@ -41,14 +43,12 @@ FUNC(launch_task)
 /* r0 points to the target context, r1 to the current context. */
 /* add your code to perform a full context switch */
 FUNC(ctx_switch_full)
-        //msr cpsr_c, #(PSR_MODE_USR)                /*change to USR mode*/
         stmia        r1!, {r4-r11, sp, lr}                /*store the current context to current task*/
         ldmia        r0!, {r4-r11, sp, lr}                /*load the context of the highest task*/
         mov        pc, lr                                /*jump to the highest task*/
 
 /*add your code to perform a half context switch */        
 FUNC(ctx_switch_half)
-        //msr cpsr_c, #(PSR_MODE_USR)                /*change to USR mode*/
         ldmia        r0!, {r4-r11, sp, lr}                /*load the context of the highest task*/
 	@add	r0, r0, #4
 	@ldr	lr, [r0]

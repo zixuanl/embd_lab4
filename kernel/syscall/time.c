@@ -1,9 +1,11 @@
-/** @file time.c
+/** @file time.c: timer system calls.
  *
  * @brief Kernel timer based syscall implementations
  *
- * @author Kartik Subramanian <ksubrama@andrew.cmu.edu>
- * @date   2008-11-16
+ * Authors: Tianyi Huang <tianyih@andrew.cmu.edu>
+ *          Zixuan Liu <zixuanl@andrew.cmu.edu>
+ *	    Jianan Lu <jiananl@andrew.cmu.edu>
+ * Date:    11/20/2013
  */
 
 #include <types.h>
@@ -14,6 +16,7 @@
 #include <systime.h>
 #include <exports.h>
 
+// returns the current system time
 unsigned long time_syscall(void)
 {
  	return system_time;
@@ -23,7 +26,7 @@ unsigned long time_syscall(void)
 
 /** @brief Waits in a tight loop for atleast the given number of milliseconds.
  *
- * @param millis  The number of milliseconds to sleep.
+ * @param msec  The number of milliseconds to sleep.
  *
  * 
  */
