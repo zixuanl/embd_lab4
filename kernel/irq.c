@@ -1,5 +1,5 @@
 /* 
- * irq.c:
+ * irq.c: irq setup and handler
  *
  * Authors: Tianyi Huang <tianyih@andrew.cmu.edu>
  *          Zixuan Liu <zixuanl@andrew.cmu.edu>

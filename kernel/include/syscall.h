@@ -4,6 +4,12 @@
  *
  * @author Mike Kasick <mkasick@andrew.cmu.edu>
  * @date   Sat, 13 Oct 2007 23:54:45 -0400
+ *
+ * Authors: Tianyi Huang <tianyih@andrew.cmu.edu>
+ *          Zixuan Liu <zixuanl@andrew.cmu.edu>
+ *	    Jianan Lu <jiananl@andrew.cmu.edu>
+ * Date:    11/23/2013
+ *
  */
 
 #ifndef SYSCALL_H

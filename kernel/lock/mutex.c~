@@ -55,7 +55,7 @@ int mutex_create_syscall(void)
 	}
 
 	// reach here if there is no mutex available
-	return ENOMEM;
+	return -ENOMEM;
 }
 
 // lock mutex

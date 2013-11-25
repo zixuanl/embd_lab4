@@ -30,4 +30,3 @@ read:
         strmi   r3, [r2]        @ store the value back to errno                    
         ldmfd   sp!, {r4-r11}   @ reload the preserved registers
         bx      lr              @ return 	mov     r4,  sp
-	mov	r5,  lr 

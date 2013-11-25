@@ -39,5 +39,5 @@ void C_IRQ_Handler() {
 	system_time++;
 	reg_write(OSTMR_OSCR_ADDR, 0);			// reset the OSCR
 	reg_set(OSTMR_OSSR_ADDR, 1);
-	device_update(system_time);
+	dev_update(system_time);
 }

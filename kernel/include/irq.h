@@ -1,6 +1,5 @@
-
 /* 
- * irq.h: 
+ * irq.h: header file for irq handlers
  *
  * Authors: Tianyi Huang <tianyih@andrew.cmu.edu>
  *          Zixuan Liu <zixuanl@andrew.cmu.edu>

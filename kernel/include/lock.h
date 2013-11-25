@@ -5,10 +5,10 @@
  * @author Kartik Subramanian <ksubrama@andrew.cmu.edu>
  * @date   2008-12-01
  *
- * @author Junsung Kim <junsungk@cmu.edu>
- *	   Veeren Mandalia <vmandali@andrew.cmu.edu>
- *	   Vikram Gupta <vikramg@andrew.cmu.edu>
- * @date   Sat, 06 Dec 2008 05:15:00 -0400
+ * Authors: Tianyi Huang <tianyih@andrew.cmu.edu>
+ *          Zixuan Liu <zixuanl@andrew.cmu.edu>
+ *	    Jianan Lu <jiananl@andrew.cmu.edu>
+ * Date:    11/23/2013
  */
 
 #include <types.h>
