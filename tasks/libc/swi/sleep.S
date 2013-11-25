@@ -13,8 +13,8 @@
 
 FUNC(sleep)
 	stmfd   sp!, {r4-r11}   @ as a called routine of APCS, preserve r4 - r11 (but in fact we won't use them)
-	mov	lr,  r5
-	mov     sp,  r4         
+	mov     r4,  sp
+	mov	r5,  lr        
         swi     SLEEP_SWI       @ use syscall read, argument r0 is used  
 	mov	lr,  r5
 	mov     sp,  r4                   

@@ -1,0 +1,32 @@
+/home/tianyihuang/Documents/18342/embd_lab4/tasks/sys_err/sys_err.o:  \
+ /home/tianyihuang/Documents/18342/embd_lab4/tasks/sys_err/sys_err.c \
+  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/stdio.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/stdarg.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/sys/types.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/bits/types.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/unistd.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/bits/fileno.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/task.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/bits/errno.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/lock.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/errno.h
+
+/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/stdio.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/stdarg.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/sys/types.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/bits/types.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/unistd.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/bits/fileno.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/task.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/bits/errno.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/lock.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/errno.h:

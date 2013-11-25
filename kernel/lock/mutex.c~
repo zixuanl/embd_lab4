@@ -50,14 +50,18 @@ int mutex_create_syscall(void)
 
 int mutex_lock_syscall(int mutex  __attribute__((unused)))
 {
+	disable_interrupts();
 	printf("mutex_lock, %d\n", mutex);
 	// if mutex invalid
 	if (mutex >= OS_NUM_MUTEX || gtMutex[mutex].bAvailable == 1) {
+		enable_interrupts();		
 		return EINVAL;
 	}
 	
-	if (gtMutex[mutex].pHolding_Tcb == get_cur_tcb())
+	if (gtMutex[mutex].pHolding_Tcb == get_cur_tcb()) {
+		enable_interrupts();
 		return EDEADLOCK;
+	}
 	
 	// if blocked
 	if (gtMutex[mutex].bLock == 1) {
@@ -87,7 +91,9 @@ int mutex_lock_syscall(int mutex  __attribute__((unused)))
 			tmp2 = tmp2->sleep_queue;	
 		}
 
+		enable_interrupts();
 		dispatch_save();
+		disable_interrupts();
 	}
 
 	// if not blocked		
@@ -103,20 +109,24 @@ int mutex_lock_syscall(int mutex  __attribute__((unused)))
 		tmp = tmp->sleep_queue;
 	}
 	*/
+	enable_interrupts();
 	return 0;
 
 }
 
 int mutex_unlock_syscall(int mutex  __attribute__((unused)))
 {
-	
+	disable_interrupts();
 	// if mutex invalid
 	if (mutex >= OS_NUM_MUTEX || gtMutex[mutex].bAvailable == 1) {
+		enable_interrupts();
 		return EINVAL;
 	}
 
-	if (gtMutex[mutex].pHolding_Tcb != get_cur_tcb())
+	if (gtMutex[mutex].pHolding_Tcb != get_cur_tcb()) {
+		enable_interrupts();
 		return EPERM;
+	}
 	
 	// first tcb in pSleep_queue
 	tcb_t* nextTcb = gtMutex[mutex].pSleep_queue;
@@ -152,6 +162,7 @@ int mutex_unlock_syscall(int mutex  __attribute__((unused)))
 		}
 		
 	}
+	enable_interrupts();
 	return 0;
 }
 

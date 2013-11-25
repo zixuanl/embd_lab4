@@ -33,7 +33,7 @@ void fun1(void* str)
 			ct++;
 		}
 	}
-	printf("before sleep\n");
+	//printf("before sleep\n");
 	sleep(ct * 10);
 	printf("Time now is %lu\n",time());
 

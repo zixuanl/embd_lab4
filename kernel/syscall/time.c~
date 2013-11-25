@@ -29,11 +29,12 @@ unsigned long time_syscall(void)
  */
 void sleep_syscall(unsigned long msec  __attribute__((unused)))
 {
+	printf("in sleep\n");
 	if (msec == 0)
 		return;
 
-	uint32_t start_time = system_time;
-	uint32_t target = (msec + SYSTIME_PRECISION * start_time)/SYSTIME_PRECISION;
+	unsigned int start_time = system_time;
+	unsigned int target = (msec + SYSTIME_PRECISION * start_time)/SYSTIME_PRECISION;
 
 	while(target > system_time) {
 		

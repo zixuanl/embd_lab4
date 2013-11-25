@@ -36,7 +36,7 @@ void mutex_init()
 
 int mutex_create_syscall(void)
 {
-	puts("mutex_create\n");
+	//puts("mutex_create\n");
 	//mutex_init();
 	int index;
 	for (index = 0; index < OS_NUM_MUTEX; index++) {
@@ -51,7 +51,7 @@ int mutex_create_syscall(void)
 int mutex_lock_syscall(int mutex  __attribute__((unused)))
 {
 	disable_interrupts();
-	printf("mutex_lock, %d\n", mutex);
+	//printf("mutex_lock, %d\n", mutex);
 	// if mutex invalid
 	if (mutex >= OS_NUM_MUTEX || gtMutex[mutex].bAvailable == 1) {
 		enable_interrupts();		
@@ -68,7 +68,7 @@ int mutex_lock_syscall(int mutex  __attribute__((unused)))
 		tcb_t** tmp = &(gtMutex[mutex].pSleep_queue);
 		while (1) {
 			if (*tmp == (void *)0) {
-				printf("null sleep q\n");
+				//printf("null sleep q\n");
 				gtMutex[mutex].pSleep_queue = runqueue_remove(get_cur_prio());
 				break;
 			}
@@ -81,6 +81,7 @@ int mutex_lock_syscall(int mutex  __attribute__((unused)))
 		}
 	
 		//test
+/*
 		printf("blocked!!!!!!!!!\n");
 		printf("mutex holding tcb: %d\n", (gtMutex[mutex].pHolding_Tcb)->native_prio);
 		printf("mutex sleep queue\n");
@@ -90,7 +91,7 @@ int mutex_lock_syscall(int mutex  __attribute__((unused)))
 			printf("sleep %d\n", tmp2->native_prio);
 			tmp2 = tmp2->sleep_queue;	
 		}
-
+*/
 		enable_interrupts();
 		dispatch_save();
 		disable_interrupts();
@@ -141,7 +142,7 @@ int mutex_unlock_syscall(int mutex  __attribute__((unused)))
 		gtMutex[mutex].pHolding_Tcb = (void *)0;
 		
 		// test
-		printf("mutex_unlock, %d\n", mutex);
+		//printf("mutex_unlock, %d\n", mutex);
 		//printf("mutex holding tcb: %d\n", (gtMutex[mutex].pHolding_Tcb)->native_prio);
 
 	}
@@ -150,6 +151,7 @@ int mutex_unlock_syscall(int mutex  __attribute__((unused)))
 		nextTcb->sleep_queue = (void *)0;
 		gtMutex[mutex].pHolding_Tcb = nextTcb;
 		runqueue_add(nextTcb, nextTcb->native_prio);
+/*
 		printf("mutex_unlock, change to %d\n", mutex);
 
 		printf("mutex holding tcb: %d\n", (gtMutex[mutex].pHolding_Tcb)->native_prio);
@@ -160,7 +162,7 @@ int mutex_unlock_syscall(int mutex  __attribute__((unused)))
 			printf("sleep %d\n", tmp->native_prio);
 			tmp = tmp->sleep_queue;	
 		}
-		
+		*/
 	}
 	enable_interrupts();
 	return 0;

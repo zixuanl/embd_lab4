@@ -6,7 +6,10 @@
   /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/arm/timer.h \
   /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/syscall.h \
   /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/task.h \
-  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/systime.h
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/systime.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/uboot/include/exports.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/stdarg.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/uboot/include/_exports.h
 
 /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/types.h:
 
@@ -21,3 +24,9 @@
 /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/task.h:
 
 /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/systime.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/uboot/include/exports.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/stdarg.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/uboot/include/_exports.h:

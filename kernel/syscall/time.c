@@ -12,6 +12,7 @@
 #include <arm/timer.h>
 #include <syscall.h>
 #include <systime.h>
+#include <exports.h>
 
 unsigned long time_syscall(void)
 {
@@ -28,6 +29,7 @@ unsigned long time_syscall(void)
  */
 void sleep_syscall(unsigned long msec  __attribute__((unused)))
 {
+	//printf("in sleep\n");
 	if (msec == 0)
 		return;
 
