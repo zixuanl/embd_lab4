@@ -109,7 +109,7 @@ int task_create_syscall(task_t* tasks, size_t num_tasks)
 int event_wait_syscall(unsigned int dev)
 {
 	// test if dev number is valid
-	if (dev > 3) {
+	if (dev > NUM_DEVICES - 1) {
 		return EINVAL;
 	}
 	
