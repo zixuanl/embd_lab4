@@ -78,7 +78,7 @@ void dev_wait(unsigned int dev)
 		}
 		if((*tmp)->sleep_queue == (void *)0) {
 			(*tmp)->sleep_queue = runqueue_remove(get_cur_prio());
-			((*tmp)->sleep_queue) = (void *)0;
+			((*tmp)->sleep_queue)->sleep_queue = (void *)0;
 			break;
 		}
 		tmp = (tcb_t **)&((*tmp)->sleep_queue);
@@ -97,9 +97,11 @@ void dev_wait(unsigned int dev)
 void dev_update(unsigned long millis)
 {	
 	//puts("dev_update\n");
+	/*
 	if (millis % 50 == 0) {
 		printf("dev_up, systime: %lu\n", millis);
 	}
+	*/
 	int i;
 	int flag = 0;
 	for (i = 0; i < NUM_DEVICES; i++) {

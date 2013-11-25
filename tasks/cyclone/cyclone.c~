@@ -13,7 +13,7 @@
 #include <unistd.h>
 #include <task.h>
 #include <bits/dev.h>
-//#include <lock.h>
+#include <lock.h>
 
 #define ITE  30
 volatile int ct;

@@ -12,8 +12,8 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <task.h>
-//#include <bits/dev.h>
-//#include <lock.h>
+#include <bits/dev.h>
+#include <lock.h>
 
 #define ITE  30
 volatile int ct;
@@ -33,6 +33,7 @@ void fun1(void* str)
 			ct++;
 		}
 	}
+	printf("before sleep\n");
 	sleep(ct * 10);
 	printf("Time now is %lu\n",time());
 

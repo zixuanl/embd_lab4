@@ -43,6 +43,7 @@ const unsigned long dev_freq[NUM_DEVICES] = {50, 100, 150, 200, 250, 300, 350, 4
 1350, 1400, 1450, 1500, 1550, 1600, 1650, 1700, 1750, 1800, 1850, 1900, 1950, 2000, 2050, 
 2100, 2150, 2200, 2250, 2300, 2350, 2400, 2450, 2500, 2550, 2600, 2650, 2700, 2750, 2800,
 2850, 2900, 2950, 3000, 3050, 3100, 3150};
+
 static dev_t devices[NUM_DEVICES];
 
 /**
@@ -96,9 +97,11 @@ void dev_wait(unsigned int dev)
 void dev_update(unsigned long millis)
 {	
 	//puts("dev_update\n");
+	/*
 	if (millis % 50 == 0) {
 		printf("dev_up, systime: %lu\n", millis);
 	}
+	*/
 	int i;
 	int flag = 0;
 	for (i = 0; i < NUM_DEVICES; i++) {

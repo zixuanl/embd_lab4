@@ -100,6 +100,9 @@ int task_create_syscall(task_t* tasks, size_t num_tasks)
 
 int event_wait_syscall(unsigned int dev)
 {
+	if (dev > 3) {
+		return EINVAL;
+	}
 	dev_wait(dev);
 	return 1;
 }
