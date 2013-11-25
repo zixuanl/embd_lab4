@@ -8,14 +8,16 @@
 
 #include <asm.h>
 #include <bits/swi.h>
-
+#include <errno.h>
 	.file "mutex_unlock.S"
 
 FUNC(mutex_unlock)
 	stmfd   sp!, {r4-r11}   @ as a called routine of APCS, preserve r4 - r11 (but in fact we won't use them)
 	mov     r4,  sp
 	mov	r5,  lr          
-        swi     MUTEX_UNLOCK	@ use syscall read, argument r0 is used   
+        swi     MUTEX_UNLOCK	@ use syscall read, argument r0 is used
+	ldr	r6,  =errno
+	str	r0,  [r6]   
 	mov	lr,  r5
 	mov     sp,  r4                 
         ldmfd   sp!, {r4-r11}   @ reload the preserved registers

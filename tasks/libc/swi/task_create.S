@@ -8,7 +8,7 @@
 
 #include <asm.h>
 #include <bits/swi.h>
-
+#include <errno.h>
 	.file "task_create.S"
 
 FUNC(task_create)
@@ -16,6 +16,8 @@ FUNC(task_create)
 	mov     r4,  sp
 	mov	r5,  lr     
         swi     CREATE_SWI	@ use syscall read, argument r0 is used
+	ldr	r6,  =errno
+	str	r0,  [r6]
 	mov	lr,  r5
 	mov	sp,  r4                    
         ldmfd   sp!, {r4-r11}   @ reload the preserved registers
