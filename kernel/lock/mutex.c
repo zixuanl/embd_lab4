@@ -1,0 +1,146 @@
+/**
+ * @file mutex.c
+ *
+ * @brief Implements mutices.
+ *
+ * @author Harry Q Bovik < PUT YOUR NAMES HERE
+ *
+ * 
+ * @date  
+ */
+
+//#define DEBUG_MUTEX
+
+#include <lock.h>
+#include <task.h>
+#include <sched.h>
+#include <bits/errno.h>
+#include <arm/psr.h>
+#include <arm/exception.h>
+//#ifdef DEBUG_MUTEX
+#include <exports.h> // temp
+//#endif
+
+mutex_t gtMutex[OS_NUM_MUTEX];
+
+void mutex_init()
+{
+	int index;
+	for (index = 0; index < OS_NUM_MUTEX; index++) {
+		gtMutex[index].bAvailable = 1;
+		gtMutex[index].pHolding_Tcb = (void *)0;
+		gtMutex[index].bLock = 0;
+		gtMutex[index].pSleep_queue = (void *)0;
+	}
+}
+
+int mutex_create_syscall(void)
+{
+	//puts("mutex_create\n");
+	mutex_init();
+	int index;
+	for (index = 0; index < OS_NUM_MUTEX; index++) {
+		if (gtMutex[index].bAvailable == 1) {
+			gtMutex[index].bAvailable = 0;
+			return index;
+		}
+	}
+	return ENOMEM;
+}
+
+int mutex_lock_syscall(int mutex  __attribute__((unused)))
+{
+	//printf("mutex_lock, %d\n", mutex);
+	// if mutex invalid
+	if (mutex >= OS_NUM_MUTEX || gtMutex[mutex].bAvailable == 1) {
+		return EINVAL;
+	}
+	
+	if (gtMutex[mutex].pHolding_Tcb == get_cur_tcb())
+		return EDEADLOCK;
+	
+	// if blocked
+	if (gtMutex[mutex].bLock == 1) {
+		tcb_t** tmp = &(gtMutex[mutex].pSleep_queue);
+		while (1) {
+			if (*tmp == (void *)0) {
+				gtMutex[mutex].pSleep_queue = runqueue_remove(get_cur_prio());
+				break;
+			}
+			if((*tmp)->sleep_queue == (void *)0) {
+				(*tmp)->sleep_queue = runqueue_remove(get_cur_prio());
+				((*tmp)->sleep_queue) = (void *)0;
+				break;
+			}
+			tmp = &((*tmp)->sleep_queue);
+		}
+		//printf("blocked!!!!!!!!!\n");
+		//printf("mutex holding tcb: %d\n", (gtMutex[mutex].pHolding_Tcb)->native_prio);
+		dispatch_save();
+	}
+
+	// if not blocked		
+	gtMutex[mutex].bLock = 1;
+	gtMutex[mutex].pHolding_Tcb = get_cur_tcb();
+	
+	//printf("mutex holding tcb: %d\n", (gtMutex[mutex].pHolding_Tcb)->native_prio);
+	//printf("mutex sleep queue\n");
+	/*
+	tcb_t* tmp = gtMutex[mutex].pSleep_queue;
+	while (tmp != (void *)0) {
+		printf("sleep %d\n", tmp->native_prio);
+		tmp = tmp->sleep_queue;
+	}
+	*/
+	return 0;
+
+}
+
+int mutex_unlock_syscall(int mutex  __attribute__((unused)))
+{
+	
+	// if mutex invalid
+	if (mutex >= OS_NUM_MUTEX || gtMutex[mutex].bAvailable == 1) {
+		return EINVAL;
+	}
+
+	if (gtMutex[mutex].pHolding_Tcb != get_cur_tcb())
+		return EPERM;
+	
+	// first tcb in pSleep_queue
+	tcb_t* nextTcb = gtMutex[mutex].pSleep_queue;
+
+	//if (nextTcb != (void *)0) {
+	// set pSleep_queue to next one
+	// gtMutex[mutex].pSleep_queue = (gtMutex[mutex].pSleep_queue)->sleep_queue;
+
+	// if there are no other tcbs blocked
+	if (nextTcb == (void *)0) {
+		gtMutex[mutex].bLock = 0;
+		gtMutex[mutex].pHolding_Tcb = (void *)0;
+		
+		// test
+		//printf("mutex_unlock, %d\n", mutex);
+		//printf("mutex holding tcb: %d\n", (gtMutex[mutex].pHolding_Tcb)->native_prio);
+
+	}
+	else {
+		gtMutex[mutex].pSleep_queue = (gtMutex[mutex].pSleep_queue)->sleep_queue;
+		nextTcb->sleep_queue = (void *)0;
+		gtMutex[mutex].pHolding_Tcb = nextTcb;
+		runqueue_add(nextTcb, nextTcb->native_prio);
+		//printf("mutex_unlock, change to %d\n", mutex);
+
+		//printf("mutex holding tcb: %d\n", (gtMutex[mutex].pHolding_Tcb)->native_prio);
+		//printf("mutex sleep queue\n");
+		/*
+		tcb_t* tmp = gtMutex[mutex].pSleep_queue;
+		while (tmp != (void *)0) {
+			printf("sleep %d\n", tmp->native_prio);
+			tmp = tmp->sleep_queue;	
+		}
+		*/
+	}
+	return 0;
+}
+

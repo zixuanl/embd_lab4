@@ -1,0 +1,20 @@
+// global.c: initiatess all the global variables we will use
+//
+// Authors: Tianyi Huang <tianyih@andrew.cmu.edu>
+//          Zixuan Liu <zixuanl@andrew.cmu.edu>
+//	    Jianan Lu <jiananl@andrew.cmu.edu>
+// Date:    10/23/2013
+
+#include <types.h>
+#include <userConst.h>
+
+// user
+rr8 = 0;
+
+// syscall return
+value = 0 ;
+
+// system time
+system_time = 0;
+
+

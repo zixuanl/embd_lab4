@@ -1,0 +1,754 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ABORT_STACK_END_ADDR	kernel/include/stack.h	15;"	d
+ALIGN	kernel/include/asm.h	23;"	d
+ALIGN	tasks/libc/include/asm.h	23;"	d
+ALIGN8	kernel/include/asm.h	24;"	d
+AR	Makefile	/^AR = $(CCPREFIX)ar$/;"	m
+ARG0	kernel/include/asm.h	12;"	d
+ARG0	tasks/libc/include/asm.h	12;"	d
+ARG1	kernel/include/asm.h	13;"	d
+ARG1	tasks/libc/include/asm.h	13;"	d
+ARG2	kernel/include/asm.h	14;"	d
+ARG2	tasks/libc/include/asm.h	14;"	d
+ARG3	kernel/include/asm.h	15;"	d
+ARG3	tasks/libc/include/asm.h	15;"	d
+ARG4	kernel/include/asm.h	17;"	d
+ARG4	tasks/libc/include/asm.h	17;"	d
+ARG5	kernel/include/asm.h	18;"	d
+ARG5	tasks/libc/include/asm.h	18;"	d
+ARG6	kernel/include/asm.h	19;"	d
+ARG6	tasks/libc/include/asm.h	19;"	d
+ARG7	kernel/include/asm.h	20;"	d
+ARG7	tasks/libc/include/asm.h	20;"	d
+ARM_OBJS	kernel/arm/kernel.mk	/^ARM_OBJS := $(ARM_OBJS:%=$(KDIR)\/arm\/%)$/;"	m
+ARM_OBJS	kernel/arm/kernel.mk	/^ARM_OBJS := reg.o psr.o $/;"	m
+ASFLAGS	Makefile	/^ASFLAGS = -nostdinc -Wall -Wextra -Werror -DASSEMBLER$/;"	m
+BITS_DEV_H	tasks/libc/include/bits/dev.h	14;"	d
+BITS_ERRNO_H	kernel/include/bits/errno.h	4;"	d
+BITS_ERRNO_H	tasks/libc/include/bits/errno.h	4;"	d
+BITS_FILENO_H	kernel/include/bits/fileno.h	10;"	d
+BITS_FILENO_H	tasks/libc/include/bits/fileno.h	10;"	d
+BITS_SWI_H	kernel/include/bits/swi.h	13;"	d
+BITS_SWI_H	tasks/libc/include/bits/swi.h	13;"	d
+BSS_WORD32	kernel/include/asm.h	34;"	d
+BUF_SIZE	kernel/syscall/io.c	23;"	d	file:
+C	kernel/include/task.h	/^	unsigned long C;           \/**< The worst-case computation time *\/$/;"	m	struct:task
+C	tasks/libc/include/task.h	/^	unsigned long C;           \/**< The worst-case computation time *\/$/;"	m	struct:task
+CC	Makefile	/^CC = $(CCPREFIX)gcc$/;"	m
+CCPREFIX	Makefile	/^CCPREFIX = arm-linux-$/;"	m
+CFLAGS	Makefile	/^$(KDIR)\/%: CFLAGS=$(KCFLAGS)$/;"	m
+CFLAGS	Makefile	/^$(TDIR)\/%: CFLAGS=$(TCFLAGS)$/;"	m
+CFLAGS	Makefile	/^$(UDIR)\/%: CFLAGS=$(KCFLAGS)$/;"	m
+CHAR_BIT	kernel/include/types.h	74;"	d
+CHAR_BIT	tasks/libc/include/bits/types.h	60;"	d
+CHAR_MAX	kernel/include/types.h	83;"	d
+CHAR_MAX	tasks/libc/include/bits/types.h	69;"	d
+CHAR_MIN	kernel/include/types.h	89;"	d
+CHAR_MIN	tasks/libc/include/bits/types.h	75;"	d
+CRASH	kernel/include/asm.h	36;"	d
+CREATE_SWI	kernel/include/bits/swi.h	24;"	d
+CREATE_SWI	tasks/libc/include/bits/swi.h	24;"	d
+CWARNINGS	Makefile	/^CWARNINGS =  $(CWARNINGS_SAFE)$/;"	m
+CWARNINGS1	Makefile	/^CWARNINGS1 = $(CWARNINGS_SAFE) $(CWARNINGS_NOISY)$/;"	m
+CWARNINGS_NOISY	Makefile	/^CWARNINGS_NOISY = -Wformat=2 -Wstrict-aliasing=2 -Wshadow -Wcast-qual \\$/;"	m
+CWARNINGS_SAFE	Makefile	/^CWARNINGS_SAFE = -Wall -Wno-unused-parameter -Wextra -Wpointer-arith \\$/;"	m
+C_IRQ_Handler	kernel/irq.c	/^void C_IRQ_Handler() {$/;"	f
+Ctod	tasks/libc/stdio/doprnt.c	142;"	d	file:
+DATA	kernel/include/asm.h	32;"	d
+DATA	tasks/libc/include/asm.h	31;"	d
+DATASYM	kernel/include/asm.h	28;"	d
+DATASYM	tasks/libc/include/asm.h	27;"	d
+DEL_CHAR	kernel/syscall/io.c	22;"	d	file:
+E2BIG	kernel/include/bits/errno.h	12;"	d
+E2BIG	tasks/libc/include/bits/errno.h	12;"	d
+EACCES	kernel/include/bits/errno.h	18;"	d
+EACCES	tasks/libc/include/bits/errno.h	18;"	d
+EAGAIN	kernel/include/bits/errno.h	16;"	d
+EAGAIN	tasks/libc/include/bits/errno.h	16;"	d
+EBADF	kernel/include/bits/errno.h	14;"	d
+EBADF	tasks/libc/include/bits/errno.h	14;"	d
+EBUSY	kernel/include/bits/errno.h	21;"	d
+EBUSY	tasks/libc/include/bits/errno.h	21;"	d
+ECHILD	kernel/include/bits/errno.h	15;"	d
+ECHILD	tasks/libc/include/bits/errno.h	15;"	d
+EDEADLOCK	kernel/include/bits/errno.h	40;"	d
+EDEADLOCK	tasks/libc/include/bits/errno.h	40;"	d
+EDOM	kernel/include/bits/errno.h	38;"	d
+EDOM	tasks/libc/include/bits/errno.h	38;"	d
+EEXIST	kernel/include/bits/errno.h	22;"	d
+EEXIST	tasks/libc/include/bits/errno.h	22;"	d
+EFAULT	kernel/include/bits/errno.h	19;"	d
+EFAULT	tasks/libc/include/bits/errno.h	19;"	d
+EFBIG	kernel/include/bits/errno.h	32;"	d
+EFBIG	tasks/libc/include/bits/errno.h	32;"	d
+EINTR	kernel/include/bits/errno.h	9;"	d
+EINTR	tasks/libc/include/bits/errno.h	9;"	d
+EINVAL	kernel/include/bits/errno.h	27;"	d
+EINVAL	tasks/libc/include/bits/errno.h	27;"	d
+EIO	kernel/include/bits/errno.h	10;"	d
+EIO	tasks/libc/include/bits/errno.h	10;"	d
+EISDIR	kernel/include/bits/errno.h	26;"	d
+EISDIR	tasks/libc/include/bits/errno.h	26;"	d
+EMFILE	kernel/include/bits/errno.h	29;"	d
+EMFILE	tasks/libc/include/bits/errno.h	29;"	d
+EMLINK	kernel/include/bits/errno.h	36;"	d
+EMLINK	tasks/libc/include/bits/errno.h	36;"	d
+ENFILE	kernel/include/bits/errno.h	28;"	d
+ENFILE	tasks/libc/include/bits/errno.h	28;"	d
+ENODEV	kernel/include/bits/errno.h	24;"	d
+ENODEV	tasks/libc/include/bits/errno.h	24;"	d
+ENOENT	kernel/include/bits/errno.h	7;"	d
+ENOENT	tasks/libc/include/bits/errno.h	7;"	d
+ENOEXEC	kernel/include/bits/errno.h	13;"	d
+ENOEXEC	tasks/libc/include/bits/errno.h	13;"	d
+ENOMEM	kernel/include/bits/errno.h	17;"	d
+ENOMEM	tasks/libc/include/bits/errno.h	17;"	d
+ENOSPC	kernel/include/bits/errno.h	33;"	d
+ENOSPC	tasks/libc/include/bits/errno.h	33;"	d
+ENOTBLK	kernel/include/bits/errno.h	20;"	d
+ENOTBLK	tasks/libc/include/bits/errno.h	20;"	d
+ENOTDIR	kernel/include/bits/errno.h	25;"	d
+ENOTDIR	tasks/libc/include/bits/errno.h	25;"	d
+ENOTTY	kernel/include/bits/errno.h	30;"	d
+ENOTTY	tasks/libc/include/bits/errno.h	30;"	d
+ENXIO	kernel/include/bits/errno.h	11;"	d
+ENXIO	tasks/libc/include/bits/errno.h	11;"	d
+EOT_CHAR	kernel/syscall/io.c	21;"	d	file:
+EPERM	kernel/include/bits/errno.h	6;"	d
+EPERM	tasks/libc/include/bits/errno.h	6;"	d
+EPIPE	kernel/include/bits/errno.h	37;"	d
+EPIPE	tasks/libc/include/bits/errno.h	37;"	d
+ERANGE	kernel/include/bits/errno.h	39;"	d
+ERANGE	tasks/libc/include/bits/errno.h	39;"	d
+EROFS	kernel/include/bits/errno.h	35;"	d
+EROFS	tasks/libc/include/bits/errno.h	35;"	d
+ERRNO_H	tasks/libc/include/errno.h	10;"	d
+ESCHED	kernel/include/bits/errno.h	42;"	d
+ESCHED	tasks/libc/include/bits/errno.h	42;"	d
+ESPIPE	kernel/include/bits/errno.h	34;"	d
+ESPIPE	tasks/libc/include/bits/errno.h	34;"	d
+ESRCH	kernel/include/bits/errno.h	8;"	d
+ESRCH	tasks/libc/include/bits/errno.h	8;"	d
+ETXTBSY	kernel/include/bits/errno.h	31;"	d
+ETXTBSY	tasks/libc/include/bits/errno.h	31;"	d
+EVENT_WAIT	kernel/include/bits/swi.h	30;"	d
+EVENT_WAIT	tasks/libc/include/bits/swi.h	30;"	d
+EXDEV	kernel/include/bits/errno.h	23;"	d
+EXDEV	tasks/libc/include/bits/errno.h	23;"	d
+EXPORT_FUNC	uboot/include/exports.h	34;"	d
+EXPORT_FUNC	uboot/include/exports.h	36;"	d
+EXPORT_FUNC	uboot/stubs.c	23;"	d	file:
+EXPORT_FUNC	uboot/stubs.c	55;"	d	file:
+EX_DABRT	kernel/include/arm/exception.h	18;"	d
+EX_FABRT	kernel/include/arm/exception.h	17;"	d
+EX_FIQ	kernel/include/arm/exception.h	20;"	d
+EX_IRQ	kernel/include/arm/exception.h	19;"	d
+EX_RESET	kernel/include/arm/exception.h	14;"	d
+EX_SWI	kernel/include/arm/exception.h	16;"	d
+EX_UD	kernel/include/arm/exception.h	15;"	d
+FALSE	kernel/include/types.h	/^	FALSE = 0,$/;"	e	enum:bool_e
+FALSE	tasks/libc/stdio/doprnt.h	/^	FALSE = 0,$/;"	e	enum:__anon2
+FALSE	tasks/libc/stdio/doscan.h	/^	FALSE = 0,$/;"	e	enum:__anon1
+FLASH_END_ADDR	kernel/include/arm/physmem.h	15;"	d
+FLASH_START_ADDR	kernel/include/arm/physmem.h	14;"	d
+FREQ_MS	kernel/include/systime.h	12;"	d
+FUNC	kernel/include/asm.h	31;"	d
+FUNC	tasks/libc/include/asm.h	30;"	d
+FUNCSYM	kernel/include/asm.h	27;"	d
+FUNCSYM	tasks/libc/include/asm.h	26;"	d
+GLOBAL	kernel/include/asm.h	25;"	d
+GLOBAL	tasks/libc/include/asm.h	24;"	d
+HIJACKCONST_H	kernel/include/hijackConst.h	11;"	d
+HIJACK_H	kernel/include/hijack.h	12;"	d
+IDLE_PRIO	kernel/include/config.h	26;"	d
+IMPLEMENTATION	kernel/arm/psr.c	3;"	d	file:
+IMPLEMENTATION	kernel/arm/reg.c	3;"	d	file:
+IMPLEMENTATION	kernel/ctype.c	9;"	d	file:
+IMPLEMENTATION	tasks/libc/stdlib/ctype.c	9;"	d	file:
+INCLUDES	Makefile	/^$(KDIR)\/%: INCLUDES=$(KINCLUDES)$/;"	m
+INCLUDES	Makefile	/^$(TDIR)\/%: INCLUDES=$(TINCLUDES)$/;"	m
+INCLUDES	Makefile	/^$(UDIR)\/%: INCLUDES=$(KINCLUDES)$/;"	m
+INLINE	kernel/include/inline.h	26;"	d
+INLINE	kernel/include/inline.h	30;"	d
+INLINE	kernel/include/inline.h	32;"	d
+INLINE	tasks/libc/include/inline.h	26;"	d
+INLINE	tasks/libc/include/inline.h	30;"	d
+INLINE	tasks/libc/include/inline.h	32;"	d
+INT16_MAX	kernel/include/types.h	62;"	d
+INT16_MAX	tasks/libc/include/bits/types.h	48;"	d
+INT16_MIN	kernel/include/types.h	66;"	d
+INT16_MIN	tasks/libc/include/bits/types.h	52;"	d
+INT32_MAX	kernel/include/types.h	63;"	d
+INT32_MAX	tasks/libc/include/bits/types.h	49;"	d
+INT32_MIN	kernel/include/types.h	67;"	d
+INT32_MIN	tasks/libc/include/bits/types.h	53;"	d
+INT64_MAX	kernel/include/types.h	64;"	d
+INT64_MAX	tasks/libc/include/bits/types.h	50;"	d
+INT64_MIN	kernel/include/types.h	68;"	d
+INT64_MIN	tasks/libc/include/bits/types.h	54;"	d
+INT8_MAX	kernel/include/types.h	61;"	d
+INT8_MAX	tasks/libc/include/bits/types.h	47;"	d
+INT8_MIN	kernel/include/types.h	65;"	d
+INT8_MIN	tasks/libc/include/bits/types.h	51;"	d
+INT_AC97	kernel/include/arm/interrupt.h	34;"	d
+INT_BTUART	kernel/include/arm/interrupt.h	40;"	d
+INT_DMA	kernel/include/arm/interrupt.h	44;"	d
+INT_FFUART	kernel/include/arm/interrupt.h	41;"	d
+INT_GPIO_0	kernel/include/arm/interrupt.h	28;"	d
+INT_GPIO_1	kernel/include/arm/interrupt.h	29;"	d
+INT_GPIO_HI	kernel/include/arm/interrupt.h	30;"	d
+INT_HUART	kernel/include/arm/interrupt.h	27;"	d
+INT_I2C	kernel/include/arm/interrupt.h	37;"	d
+INT_I2S	kernel/include/arm/interrupt.h	33;"	d
+INT_ICCR_ADDR	kernel/include/arm/interrupt.h	24;"	d
+INT_ICCR_DIM	kernel/include/arm/interrupt.h	25;"	d
+INT_ICFP_ADDR	kernel/include/arm/interrupt.h	21;"	d
+INT_ICIP_ADDR	kernel/include/arm/interrupt.h	18;"	d
+INT_ICLR_ADDR	kernel/include/arm/interrupt.h	20;"	d
+INT_ICMR_ADDR	kernel/include/arm/interrupt.h	19;"	d
+INT_ICP	kernel/include/arm/interrupt.h	38;"	d
+INT_ICPR_ADDR	kernel/include/arm/interrupt.h	22;"	d
+INT_LCD	kernel/include/arm/interrupt.h	36;"	d
+INT_MAX	kernel/include/types.h	85;"	d
+INT_MAX	tasks/libc/include/bits/types.h	71;"	d
+INT_MIN	kernel/include/types.h	91;"	d
+INT_MIN	tasks/libc/include/bits/types.h	77;"	d
+INT_MMC	kernel/include/arm/interrupt.h	42;"	d
+INT_NSSP	kernel/include/arm/interrupt.h	35;"	d
+INT_OSTMR_0	kernel/include/arm/interrupt.h	45;"	d
+INT_OSTMR_1	kernel/include/arm/interrupt.h	46;"	d
+INT_OSTMR_2	kernel/include/arm/interrupt.h	47;"	d
+INT_OSTMR_3	kernel/include/arm/interrupt.h	48;"	d
+INT_PMU	kernel/include/arm/interrupt.h	32;"	d
+INT_RESERVED_MASK	kernel/include/arm/interrupt.h	52;"	d
+INT_RTC_HZ	kernel/include/arm/interrupt.h	49;"	d
+INT_RTC_MATCH	kernel/include/arm/interrupt.h	50;"	d
+INT_SSP	kernel/include/arm/interrupt.h	43;"	d
+INT_STUART	kernel/include/arm/interrupt.h	39;"	d
+INT_USB	kernel/include/arm/interrupt.h	31;"	d
+IRQ_H	kernel/include/irq.h	12;"	d
+KCFLAGS	Makefile	/^KCFLAGS = -g -Os -ffreestanding -ffixed-r8 -nostdinc $(CWARNINGS)$/;"	m
+KDIR	Makefile	/^KDIR = $(ROOT)\/kernel$/;"	m
+KERNEL	kernel/kernel.mk	/^KERNEL = $(KDIR)\/kernel$/;"	m
+KERNEL_H	kernel/include/kernel.h	10;"	d
+KERNEL_START_ADDR	kernel/include/stack.h	14;"	d
+KINCLUDES	Makefile	/^KINCLUDES = -I$(UDIR)\/include -I$(KDIR)\/include$/;"	m
+KLDFLAGS	Makefile	/^KLDFLAGS = -nostdlib -N --fatal-warnings --warn-common -Ttext $(KLOAD_ADDR)$/;"	m
+KLOAD_ADDR	Makefile	/^KLOAD_ADDR = 0xa3000000$/;"	m
+KOBJS	kernel/kernel.mk	/^KOBJS := $(KOBJS:%=$(KDIR)\/%)$/;"	m
+KOBJS	kernel/kernel.mk	/^KOBJS := assert.o main.o math.o memcheck.o raise.o ctype.o hexdump.o device.o global.o hijack.o IRQ_Handler.o S_Handler.o Usermode.o irq.o$/;"	m
+KSTART	kernel/kernel.mk	/^KSTART = $(KDIR)\/start.o$/;"	m
+LD	Makefile	/^LD = $(CCPREFIX)ld$/;"	m
+LDFLAGS	Makefile	/^$(KDIR)\/%: LDFLAGS=$(KLDFLAGS)$/;"	m
+LDFLAGS	Makefile	/^$(TDIR)\/%: LDFLAGS=$(TLDFLAGS)$/;"	m
+LDFLAGS	Makefile	/^$(UDIR)\/%: LDFLAGS=$(KLDFLAGS)$/;"	m
+LEGEL_MEM_END_ADDR	kernel/include/stack.h	13;"	d
+LEGEL_MEM_START_ADDR	kernel/include/stack.h	12;"	d
+LIBC_GROUP	tasks/tasks.mk	/^LIBC_GROUP = --start-group $(TLIBC) $(LIBGCC) --end-group$/;"	m
+LIBGCC	Makefile	/^LIBGCC = `$(CC) -print-libgcc-file-name`$/;"	m
+LLONG_MAX	kernel/include/types.h	87;"	d
+LLONG_MAX	tasks/libc/include/bits/types.h	73;"	d
+LLONG_MIN	kernel/include/types.h	93;"	d
+LLONG_MIN	tasks/libc/include/bits/types.h	79;"	d
+LOAD_ADDR	kernel/include/config.h	16;"	d
+LOAD_PC_PC_4_ENCODING	kernel/include/hijackConst.h	17;"	d
+LOAD_PC_PC_MINUS_OFFSET_MASK	kernel/include/hijackConst.h	19;"	d
+LOAD_PC_PC_PLUS_OFFSET_MASK	kernel/include/hijackConst.h	18;"	d
+LOCK_OBJS	kernel/lock/kernel.mk	/^LOCK_OBJS := $(LOCK_OBJS:%=$(KDIR)\/lock\/%)$/;"	m
+LOCK_OBJS	kernel/lock/kernel.mk	/^LOCK_OBJS := mutex.o$/;"	m
+LONG_MAX	kernel/include/types.h	86;"	d
+LONG_MAX	tasks/libc/include/bits/types.h	72;"	d
+LONG_MIN	kernel/include/types.h	92;"	d
+LONG_MIN	tasks/libc/include/bits/types.h	78;"	d
+MAXBUF	tasks/libc/stdio/doprnt.c	144;"	d	file:
+MUTEX_CREATE	kernel/include/bits/swi.h	26;"	d
+MUTEX_CREATE	tasks/libc/include/bits/swi.h	26;"	d
+MUTEX_LOCK	kernel/include/bits/swi.h	27;"	d
+MUTEX_LOCK	tasks/libc/include/bits/swi.h	27;"	d
+MUTEX_UNLOCK	kernel/include/bits/swi.h	28;"	d
+MUTEX_UNLOCK	tasks/libc/include/bits/swi.h	28;"	d
+N	tasks/rot13/rot13.c	15;"	d	file:
+N	tasks/typo/typo.c	15;"	d	file:
+NUM_DEVICES	kernel/include/device.h	16;"	d
+NUM_DEVICES	tasks/libc/include/bits/dev.h	16;"	d
+NUM_DEVICES	tasks/libc/include/unistd.h	15;"	d
+NUM_EXCEPTIONS	kernel/include/arm/exception.h	21;"	d
+NUM_INTERRUPTS	kernel/include/arm/interrupt.h	54;"	d
+OBJCOPY	Makefile	/^OBJCOPY = $(CCPREFIX)objcopy$/;"	m
+OFFSETOF_JT_IN_GD_T	uboot/stubs.c	17;"	d	file:
+OSTMR_FREQ	kernel/include/arm/timer.h	37;"	d
+OSTMR_OIER_ADDR	kernel/include/arm/timer.h	31;"	d
+OSTMR_OIER_E0	kernel/include/arm/timer.h	32;"	d
+OSTMR_OIER_E1	kernel/include/arm/timer.h	33;"	d
+OSTMR_OIER_E2	kernel/include/arm/timer.h	34;"	d
+OSTMR_OIER_E3	kernel/include/arm/timer.h	35;"	d
+OSTMR_OSCR_ADDR	kernel/include/arm/timer.h	20;"	d
+OSTMR_OSMR_ADDR	kernel/include/arm/timer.h	18;"	d
+OSTMR_OSSR_ADDR	kernel/include/arm/timer.h	22;"	d
+OSTMR_OSSR_M0	kernel/include/arm/timer.h	23;"	d
+OSTMR_OSSR_M1	kernel/include/arm/timer.h	24;"	d
+OSTMR_OSSR_M2	kernel/include/arm/timer.h	25;"	d
+OSTMR_OSSR_M3	kernel/include/arm/timer.h	26;"	d
+OSTMR_OWER_ADDR	kernel/include/arm/timer.h	28;"	d
+OSTMR_OWER_WME	kernel/include/arm/timer.h	29;"	d
+OS_AVAIL_TASKS	kernel/include/config.h	28;"	d
+OS_KSTACK_SIZE	kernel/include/config.h	22;"	d
+OS_MAX_TASKS	kernel/include/config.h	27;"	d
+OS_NUM_MUTEX	kernel/include/config.h	31;"	d
+OS_TICKS_PER_SEC	kernel/include/config.h	13;"	d
+OS_TIMER_RESOLUTION	kernel/include/config.h	14;"	d
+OS_USTACK_ALIGN	kernel/include/config.h	23;"	d
+PACKAGES	Makefile	/^PACKAGES = dagger hello rot13 typo$/;"	m
+PACKAGE_MKS	tasks/tasks.mk	/^PACKAGE_MKS = $(PACKAGES:%=$(TDIR)\/%\/pack.mk)$/;"	m
+PACKAGE_TARGETS	tasks/tasks.mk	/^PACKAGE_TARGETS = $(PACKAGES:%=$(TDIR)\/bin\/%)$/;"	m
+PC_CURRENTADDR_OFFSET	kernel/include/hijackConst.h	16;"	d
+PERIOD_DEV0	tasks/libc/include/bits/dev.h	17;"	d
+PERIOD_DEV0	tasks/libc/include/unistd.h	16;"	d
+PERIOD_DEV1	tasks/libc/include/bits/dev.h	18;"	d
+PERIOD_DEV1	tasks/libc/include/unistd.h	17;"	d
+PERIOD_DEV2	tasks/libc/include/bits/dev.h	19;"	d
+PERIOD_DEV2	tasks/libc/include/unistd.h	18;"	d
+PERIOD_DEV3	tasks/libc/include/bits/dev.h	20;"	d
+PERIOD_DEV3	tasks/libc/include/unistd.h	19;"	d
+PERIPHERAL_BASE	kernel/include/arm/reg.h	16;"	d
+PRINTF_BUFMAX	tasks/libc/stdio/printf.c	37;"	d	file:
+PROGS_DAGGER_OBJS	tasks/dagger/pack.mk	/^PROGS_DAGGER_OBJS := $(PROGS_DAGGER_OBJS:%=$(TDIR)\/dagger\/%)$/;"	m
+PROGS_DAGGER_OBJS	tasks/dagger/pack.mk	/^PROGS_DAGGER_OBJS := dagger.o$/;"	m
+PROGS_HELLO_OBJS	tasks/hello/pack.mk	/^PROGS_HELLO_OBJS := $(PROGS_HELLO_OBJS:%=$(TDIR)\/hello\/%)$/;"	m
+PROGS_HELLO_OBJS	tasks/hello/pack.mk	/^PROGS_HELLO_OBJS := hello.o$/;"	m
+PROGS_ROT13_OBJS	tasks/rot13/pack.mk	/^PROGS_ROT13_OBJS := $(PROGS_ROT13_OBJS:%=$(TDIR)\/rot13\/%)$/;"	m
+PROGS_ROT13_OBJS	tasks/rot13/pack.mk	/^PROGS_ROT13_OBJS := rot13.o$/;"	m
+PROGS_TYPO_OBJS	tasks/typo/pack.mk	/^PROGS_TYPO_OBJS := $(PROGS_TYPO_OBJS:%=$(TDIR)\/typo\/%)$/;"	m
+PROGS_TYPO_OBJS	tasks/typo/pack.mk	/^PROGS_TYPO_OBJS := typo.o$/;"	m
+PSR_CARRY	kernel/include/arm/psr.h	16;"	d
+PSR_FIQ	kernel/include/arm/psr.h	19;"	d
+PSR_IRQ	kernel/include/arm/psr.h	18;"	d
+PSR_MODE	kernel/include/arm/psr.h	20;"	d
+PSR_MODE_ABT	kernel/include/arm/psr.h	26;"	d
+PSR_MODE_FIQ	kernel/include/arm/psr.h	23;"	d
+PSR_MODE_IRQ	kernel/include/arm/psr.h	24;"	d
+PSR_MODE_SVC	kernel/include/arm/psr.h	25;"	d
+PSR_MODE_SYS	kernel/include/arm/psr.h	28;"	d
+PSR_MODE_UND	kernel/include/arm/psr.h	27;"	d
+PSR_MODE_USR	kernel/include/arm/psr.h	22;"	d
+PSR_NEG	kernel/include/arm/psr.h	14;"	d
+PSR_OFLW	kernel/include/arm/psr.h	17;"	d
+PSR_ZERO	kernel/include/arm/psr.h	15;"	d
+RAM_END_ADDR	kernel/include/arm/physmem.h	17;"	d
+RAM_START_ADDR	kernel/include/arm/physmem.h	16;"	d
+READ_SWI	kernel/include/bits/swi.h	17;"	d
+READ_SWI	tasks/libc/include/bits/swi.h	17;"	d
+RM	Makefile	/^RM = rm -f$/;"	m
+ROOT	Makefile	/^ROOT = $(PWD)$/;"	m
+SCHAR_MAX	kernel/include/types.h	82;"	d
+SCHAR_MAX	tasks/libc/include/bits/types.h	68;"	d
+SCHAR_MIN	kernel/include/types.h	88;"	d
+SCHAR_MIN	tasks/libc/include/bits/types.h	74;"	d
+SCHED_H	kernel/include/sched.h	10;"	d
+SCHED_OBJS	kernel/sched/kernel.mk	/^SCHED_OBJS := $(SCHED_OBJS:%=$(KDIR)\/sched\/%)$/;"	m
+SCHED_OBJS	kernel/sched/kernel.mk	/^SCHED_OBJS := sched.o ub_test.o ctx_switch.o ctx_switch_asm.o run_queue.o$/;"	m
+SHRT_MAX	kernel/include/types.h	84;"	d
+SHRT_MAX	tasks/libc/include/bits/types.h	70;"	d
+SHRT_MIN	kernel/include/types.h	90;"	d
+SHRT_MIN	tasks/libc/include/bits/types.h	76;"	d
+SIZE	kernel/include/asm.h	29;"	d
+SIZE	tasks/libc/include/asm.h	28;"	d
+SIZE_MAX	kernel/include/types.h	70;"	d
+SIZE_MAX	tasks/libc/include/bits/types.h	56;"	d
+SLEEP_SWI	kernel/include/bits/swi.h	22;"	d
+SLEEP_SWI	tasks/libc/include/bits/swi.h	22;"	d
+SPRINTF_UNLIMITED	tasks/libc/stdio/sprintf.c	31;"	d	file:
+SSIZE_MAX	kernel/include/types.h	71;"	d
+SSIZE_MAX	tasks/libc/include/bits/types.h	57;"	d
+SSIZE_MIN	kernel/include/types.h	72;"	d
+SSIZE_MIN	tasks/libc/include/bits/types.h	58;"	d
+STACK_H	kernel/include/stack.h	9;"	d
+STDARG_H	kernel/include/stdarg.h	9;"	d
+STDARG_H	tasks/libc/include/stdarg.h	9;"	d
+STDERR_FILENO	kernel/include/bits/fileno.h	14;"	d
+STDERR_FILENO	tasks/libc/include/bits/fileno.h	14;"	d
+STDIN_FILENO	kernel/include/bits/fileno.h	12;"	d
+STDIN_FILENO	tasks/libc/include/bits/fileno.h	12;"	d
+STDLIB_H	tasks/libc/include/stdlib.h	14;"	d
+STDOUT_FILENO	kernel/include/bits/fileno.h	13;"	d
+STDOUT_FILENO	tasks/libc/include/bits/fileno.h	13;"	d
+SWI_BASE	kernel/include/bits/swi.h	15;"	d
+SWI_BASE	tasks/libc/include/bits/swi.h	15;"	d
+SYSCALL_H	kernel/include/syscall.h	10;"	d
+SYSCALL_OBJS	kernel/syscall/kernel.mk	/^SYSCALL_OBJS := $(SYSCALL_OBJS:%=$(KDIR)\/syscall\/%)$/;"	m
+SYSCALL_OBJS	kernel/syscall/kernel.mk	/^SYSCALL_OBJS := io.o proc.o time.o sys.o$/;"	m
+SYSTIME_H	kernel/include/systime.h	9;"	d
+SYSTIME_PRECISION	kernel/include/systime.h	11;"	d
+SYS_TYPES_H	tasks/libc/include/sys/types.h	9;"	d
+S_Handler	kernel/S_Handler.S	/^S_Handler:                                                                      $/;"	l
+T	kernel/include/task.h	/^	unsigned long T;           \/**< The task's period *\/$/;"	m	struct:task
+T	tasks/libc/include/task.h	/^	unsigned long T;           \/**< The task's period *\/$/;"	m	struct:task
+TASK_H	kernel/include/task.h	10;"	d
+TASK_H	tasks/libc/include/task.h	10;"	d
+TCFLAGS	Makefile	/^TCFLAGS = -g -Os -ffreestanding -nostdinc $(CWARNINGS)$/;"	m
+TDIR	Makefile	/^TDIR = $(ROOT)\/tasks$/;"	m
+TIME_SWI	kernel/include/bits/swi.h	21;"	d
+TIME_SWI	tasks/libc/include/bits/swi.h	21;"	d
+TINCLUDES	Makefile	/^TINCLUDES = -I$(TLIBCDIR)\/include$/;"	m
+TLDFLAGS	Makefile	/^TLDFLAGS = -nostdlib -N --fatal-warnings --warn-common -Ttext $(TLOAD_ADDR)$/;"	m
+TLIBC	tasks/libc/libc.mk	/^TLIBC = $(TLIBCDIR)\/libc.a$/;"	m
+TLIBCDIR	Makefile	/^TLIBCDIR = $(TDIR)\/libc$/;"	m
+TLIBC_GLOBAL_OBJS	tasks/libc/libc.mk	/^TLIBC_GLOBAL_OBJS := $(TLIBC_GLOBAL_OBJS:%=$(TLIBCDIR)\/%)$/;"	m
+TLIBC_GLOBAL_OBJS	tasks/libc/libc.mk	/^TLIBC_GLOBAL_OBJS := raise.o$/;"	m
+TLIBC_LIBS	tasks/libc/libc.mk	/^TLIBC_LIBS = swi string stdio stdlib$/;"	m
+TLIBC_MKS	tasks/libc/libc.mk	/^TLIBC_MKS = $(TLIBC_LIBS:%=$(TLIBCDIR)\/%\/libc.mk)$/;"	m
+TLIBC_STDIO_OBJS	tasks/libc/stdio/libc.mk	/^TLIBC_STDIO_OBJS := $(TLIBC_STDIO_OBJS:%=$(TLIBCDIR)\/stdio\/%)$/;"	m
+TLIBC_STDIO_OBJS	tasks/libc/stdio/libc.mk	/^TLIBC_STDIO_OBJS := doprnt.o doscan.o hexdump.o printf.o putchar.o puts.o \\$/;"	m
+TLIBC_STDLIB_OBJS	tasks/libc/stdlib/libc.mk	/^TLIBC_STDLIB_OBJS := $(TLIBC_STDLIB_OBJS:%=$(TLIBCDIR)\/stdlib\/%)$/;"	m
+TLIBC_STDLIB_OBJS	tasks/libc/stdlib/libc.mk	/^TLIBC_STDLIB_OBJS := errno.o ctype.o atoi.o strtol.o strtoul.o rand.o$/;"	m
+TLIBC_STRING_OBJS	tasks/libc/string/libc.mk	/^TLIBC_STRING_OBJS := $(TLIBC_STRING_OBJS:%=$(TLIBCDIR)\/string\/%)$/;"	m
+TLIBC_STRING_OBJS	tasks/libc/string/libc.mk	/^TLIBC_STRING_OBJS := memmove.o memcmp.o memset.o \\$/;"	m
+TLIBC_SWI_OBJS	tasks/libc/swi/libc.mk	/^TLIBC_SWI_OBJS := $(TLIBC_SWI_OBJS:%=$(TLIBCDIR)\/swi\/%)$/;"	m
+TLIBC_SWI_OBJS	tasks/libc/swi/libc.mk	/^TLIBC_SWI_OBJS := read.o write.o time.o sleep.o event_wait.o mutex_create.o mutex_unlock.o mutex_lock.o task_create.o$/;"	m
+TLOAD_ADDR	Makefile	/^TLOAD_ADDR = 0xa0000000$/;"	m
+TRUE	kernel/include/types.h	/^	TRUE$/;"	e	enum:bool_e
+TRUE	tasks/libc/stdio/doprnt.h	/^	TRUE$/;"	e	enum:__anon2
+TRUE	tasks/libc/stdio/doscan.h	/^	TRUE$/;"	e	enum:__anon1
+TSTART	tasks/libc/libc.mk	/^TSTART = $(TLIBCDIR)\/crt0.o$/;"	m
+UCHAR_MAX	kernel/include/types.h	76;"	d
+UCHAR_MAX	tasks/libc/include/bits/types.h	62;"	d
+UDIR	Makefile	/^UDIR = $(ROOT)\/uboot$/;"	m
+UINT16_MAX	kernel/include/types.h	57;"	d
+UINT16_MAX	tasks/libc/include/bits/types.h	43;"	d
+UINT32_MAX	kernel/include/types.h	58;"	d
+UINT32_MAX	tasks/libc/include/bits/types.h	44;"	d
+UINT64_MAX	kernel/include/types.h	59;"	d
+UINT64_MAX	tasks/libc/include/bits/types.h	45;"	d
+UINT8_MAX	kernel/include/types.h	56;"	d
+UINT8_MAX	tasks/libc/include/bits/types.h	42;"	d
+UINT_MAX	kernel/include/types.h	78;"	d
+UINT_MAX	tasks/libc/include/bits/types.h	64;"	d
+ULLONG_MAX	kernel/include/types.h	80;"	d
+ULLONG_MAX	tasks/libc/include/bits/types.h	66;"	d
+ULONG_MAX	kernel/include/types.h	79;"	d
+ULONG_MAX	tasks/libc/include/bits/types.h	65;"	d
+UNISTD_H	tasks/libc/include/unistd.h	10;"	d
+UOBJS	uboot/uboot.mk	/^UOBJS := $(UOBJS:%=$(UDIR)\/%)$/;"	m
+UOBJS	uboot/uboot.mk	/^UOBJS := stubs.o$/;"	m
+USERCONST_H	kernel/include/userConst.h	9;"	d
+USHRT_MAX	kernel/include/types.h	77;"	d
+USHRT_MAX	tasks/libc/include/bits/types.h	63;"	d
+USR_END_ADDR	kernel/include/config.h	20;"	d
+USR_STACK	kernel/include/config.h	17;"	d
+USR_START_ADDR	kernel/include/config.h	19;"	d
+Usermode	kernel/Usermode.S	/^Usermode:         $/;"	l
+VECTORTABLE_IRQ_ENTRY	kernel/include/hijackConst.h	15;"	d
+VECTORTABLE_SWI_ENTRY	kernel/include/hijackConst.h	14;"	d
+WRITE_SWI	kernel/include/bits/swi.h	18;"	d
+WRITE_SWI	tasks/libc/include/bits/swi.h	18;"	d
+XF_MAX	uboot/include/exports.h	/^	XF_MAX$/;"	e	enum:__anon3
+XF_VERSION	uboot/include/exports.h	41;"	d
+_ASM_H_	kernel/include/asm.h	10;"	d
+_ASM_H_	tasks/libc/include/asm.h	10;"	d
+_ASSERT_H_	kernel/include/assert.h	10;"	d
+_BITS_TYPES_H_	kernel/include/types.h	19;"	d
+_BITS_TYPES_H_	tasks/libc/include/bits/types.h	11;"	d
+_CONFIG_H_	kernel/include/config.h	11;"	d
+_CTYPE_H_	kernel/include/ctype.h	10;"	d
+_CTYPE_H_	tasks/libc/include/ctype.h	10;"	d
+_DEVICE_H_	kernel/include/device.h	14;"	d
+_EXCEPTION_H_	kernel/include/arm/exception.h	12;"	d
+_EXPORTS_H_	uboot/include/exports.h	4;"	d
+_FLUX_MC_STDIO_H	tasks/libc/include/stdio.h	31;"	d
+_FLUX_MC_STRING_H_	tasks/libc/include/string.h	30;"	d
+_INTERRUPT_H_	kernel/include/arm/interrupt.h	16;"	d
+_LOCK_H_	kernel/include/lock.h	18;"	d
+_MATH_H_	kernel/include/math.h	11;"	d
+_PHYSMEM_H_	kernel/include/arm/physmem.h	12;"	d
+_PSR_H_	kernel/include/arm/psr.h	12;"	d
+_REG_H_	kernel/include/arm/reg.h	12;"	d
+_SCHED_I_H_	kernel/sched/sched_i.h	10;"	d
+_SWI_H_	kernel/include/arm/swi.h	12;"	d
+_TIMER_H_	kernel/include/arm/timer.h	16;"	d
+__DOPRNT_H_INCLUDED__	tasks/libc/stdio/doprnt.h	23;"	d
+__DOSCAN_H_INCLUDED__	tasks/libc/stdio/doscan.h	23;"	d
+_doprnt	tasks/libc/stdio/doprnt.c	/^void _doprnt(const char *fmt, va_list args, int radix, void (*putc)(char*, int), char *putc_arg)$/;"	f
+_doprnt_truncates	tasks/libc/stdio/doprnt.c	/^boolean_t  _doprnt_truncates = FALSE;$/;"	v
+_doscan	tasks/libc/stdio/doscan.c	/^int _doscan(const unsigned char *fmt, va_list vp,$/;"	f
+_start	tasks/libc/crt0.S	/^_start:$/;"	l
+allocate_tasks	kernel/sched/sched.c	/^void allocate_tasks(task_t** tasks  __attribute__((unused)), size_t num_tasks  __attribute__((unused)))$/;"	f
+app_startup	uboot/stubs.c	/^void app_startup(void)$/;"	f
+assert	kernel/include/assert.h	14;"	d
+assert	kernel/include/assert.h	28;"	d
+assign_schedule	kernel/sched/ub_test.c	/^int assign_schedule(task_t** tasks  __attribute__((unused)), size_t num_tasks  __attribute__((unused)))$/;"	f
+atoi	tasks/libc/stdlib/atoi.c	/^int atoi(const char* str)$/;"	f
+atol	tasks/libc/stdlib/atoi.c	/^long atol(const char* str)$/;"	f
+bAvailable	kernel/include/lock.h	/^	bool_e	bAvailable;		\/* flag for availability *\/$/;"	m	struct:mutex
+bLock	kernel/include/lock.h	/^	bool_e	bLock;			\/* 1 for lock\/0 for unlock *\/	$/;"	m	struct:mutex
+bool_e	kernel/include/types.h	/^typedef enum bool_e$/;"	g
+bool_e	kernel/include/types.h	/^} bool_e;$/;"	t	typeref:enum:bool_e
+boolean_t	tasks/libc/stdio/doprnt.h	/^} boolean_t;$/;"	t	typeref:enum:__anon2
+boolean_t	tasks/libc/stdio/doscan.h	/^} boolean_t;$/;"	t	typeref:enum:__anon1
+buf	tasks/libc/stdio/printf.c	/^	char buf[PRINTF_BUFMAX];$/;"	m	struct:printf_state	file:
+buf	tasks/libc/stdio/sprintf.c	/^	char *buf;$/;"	m	struct:sprintf_state	file:
+cond	kernel/include/lock.h	/^struct cond$/;"	s
+cond_t	kernel/include/lock.h	/^typedef struct cond cond_t;$/;"	t	typeref:struct:cond
+context	kernel/include/task.h	/^	sched_context_t  context;            \/**< The task's serialized context -- if not running *\/$/;"	m	struct:tcb
+crash	kernel/include/assert.h	15;"	d
+crash	kernel/include/assert.h	24;"	d
+cur_prio	kernel/include/task.h	/^	uint8_t          cur_prio;           \/**< The current priority of the task after priority inheritance *\/$/;"	m	struct:tcb
+cur_tcb	kernel/sched/ctx_switch.c	/^static __attribute__((unused)) tcb_t* cur_tcb; \/* use this if needed *\/$/;"	v	file:
+data	kernel/include/task.h	/^	void*         data;        \/**< Argument to the root function *\/$/;"	m	struct:task
+data	tasks/libc/include/task.h	/^	void*         data;        \/**< Argument to the root function *\/$/;"	m	struct:task
+dev	kernel/device.c	/^struct dev$/;"	s	file:
+dev_freq	kernel/device.c	/^const unsigned long dev_freq[NUM_DEVICES] = {50, 100, 200, 500,};$/;"	v
+dev_init	kernel/device.c	/^void dev_init(void)$/;"	f
+dev_t	kernel/device.c	/^typedef struct dev dev_t;$/;"	t	typeref:struct:dev	file:
+dev_update	kernel/device.c	/^void dev_update(unsigned long millis)$/;"	f
+dev_wait	kernel/device.c	/^void dev_wait(unsigned int dev)$/;"	f
+devices	kernel/device.c	/^static dev_t devices[NUM_DEVICES];$/;"	v	file:
+digs	tasks/libc/stdio/doprnt.c	/^static char digs[] = "0123456789abcdef";$/;"	v	file:
+disable_interrupts	kernel/include/arm/exception.h	/^INLINE void disable_interrupts(void)$/;"	f
+dispatch_init	kernel/sched/ctx_switch.c	/^void dispatch_init(tcb_t* idle __attribute__((unused)))$/;"	f
+dispatch_nosave	kernel/sched/ctx_switch.c	/^void dispatch_nosave(void)$/;"	f
+dispatch_save	kernel/sched/ctx_switch.c	/^void dispatch_save(void)$/;"	f
+dispatch_sleep	kernel/sched/ctx_switch.c	/^void dispatch_sleep(void)$/;"	f
+dummy	uboot/stubs.c	/^static void __attribute__((used, naked)) dummy(void)$/;"	f	file:
+enable_interrupts	kernel/include/arm/exception.h	/^INLINE void enable_interrupts(void)$/;"	f
+errno	tasks/libc/stdlib/errno.c	/^int errno = 0;$/;"	v
+event_wait	kernel/syscall/proc.c	/^int event_wait(unsigned int dev)$/;"	f
+ex_context	kernel/include/arm/exception.h	/^struct ex_context$/;"	s
+ex_context_t	kernel/include/arm/exception.h	/^typedef struct ex_context ex_context_t;$/;"	t	typeref:struct:ex_context
+flush	tasks/libc/stdio/printf.c	/^static void flush(struct printf_state *state)$/;"	f	file:
+fun1	tasks/dagger/dagger.c	/^void fun1(void* str)$/;"	f
+fun2	tasks/dagger/dagger.c	/^void fun2(void* str)$/;"	f
+fun3	tasks/dagger/dagger.c	/^void fun3(void* str)$/;"	f
+fun4	tasks/dagger/dagger.c	/^void fun4(void* str)$/;"	f
+getSWI	kernel/syscall/sys.c	/^int getSWI(int num, int *sp) {$/;"	f
+get_cur_prio	kernel/sched/ctx_switch.c	/^uint8_t get_cur_prio(void)$/;"	f
+get_cur_tcb	kernel/sched/ctx_switch.c	/^tcb_t* get_cur_tcb(void)$/;"	f
+global_data	kernel/main.c	/^uint32_t global_data;$/;"	v
+group_run_bits	kernel/sched/run_queue.c	/^static uint8_t group_run_bits __attribute__((unused));$/;"	v	file:
+gtMutex	kernel/lock/mutex.c	/^mutex_t gtMutex[OS_NUM_MUTEX];$/;"	v
+hello	tasks/hello/hello.c	/^const char hello[] = "Hello World\\r\\n";$/;"	v
+hexdump	kernel/hexdump.c	/^void hexdump(void *buf, size_t len)$/;"	f
+hexdump	tasks/libc/stdio/hexdump.c	/^void hexdump(void *buf, size_t len)$/;"	f
+highest_prio	kernel/sched/run_queue.c	/^uint8_t highest_prio(void)$/;"	f
+holds_lock	kernel/include/task.h	/^	int              holds_lock;         \/**< 1 if the task is currently owning a lock *\/$/;"	m	struct:tcb
+iaddr_1	kernel/include/hijackConst.h	/^int *iaddr_1;					\/\/ address of the first instruction we altered$/;"	v
+iaddr_2	kernel/include/hijackConst.h	/^int *iaddr_2;					\/\/ address of the second instruction we altered$/;"	v
+idle	kernel/sched/sched.c	/^static void __attribute__((unused)) idle(void)$/;"	f	file:
+ilog2	kernel/math.c	/^unsigned int ilog2(unsigned int v)$/;"	f
+ilog2	kernel/math.c	/^unsigned int ilog2(unsigned int x)$/;"	f
+index	tasks/libc/stdio/printf.c	/^	unsigned int index;$/;"	m	struct:printf_state	file:
+install_handler	kernel/hijack.c	/^int install_handler() {$/;"	f
+install_irqhandler	kernel/hijack.c	/^int install_irqhandler() {$/;"	f
+instruction1	kernel/include/hijackConst.h	/^int instruction1;				\/\/ content of the first instruction we altered$/;"	v
+instruction2	kernel/include/hijackConst.h	/^int instruction2;				\/\/ content of the second instruction we altered$/;"	v
+int16_t	kernel/include/types.h	/^typedef short               int16_t;$/;"	t
+int16_t	tasks/libc/include/bits/types.h	/^typedef short               int16_t;$/;"	t
+int32_t	kernel/include/types.h	/^typedef int                 int32_t;$/;"	t
+int32_t	tasks/libc/include/bits/types.h	/^typedef int                 int32_t;$/;"	t
+int64_t	kernel/include/types.h	/^typedef long long           int64_t;$/;"	t
+int64_t	tasks/libc/include/bits/types.h	/^typedef long long           int64_t;$/;"	t
+int8_t	kernel/include/types.h	/^typedef char                int8_t;$/;"	t
+int8_t	tasks/libc/include/bits/types.h	/^typedef char                int8_t;$/;"	t
+interrupt_handler_t	uboot/include/exports.h	/^typedef void (interrupt_handler_t)(void *);$/;"	t
+intptr_t	kernel/include/types.h	/^typedef int32_t             intptr_t;$/;"	t
+intptr_t	tasks/libc/include/bits/types.h	/^typedef int32_t             intptr_t;$/;"	t
+invalid_syscall	kernel/syscall/proc.c	/^void invalid_syscall(unsigned int call_num)$/;"	f
+irq_iaddr_1	kernel/include/hijackConst.h	/^int *irq_iaddr_1;				\/\/ address of the first instruction we altered (for IRQ)$/;"	v
+irq_iaddr_2	kernel/include/hijackConst.h	/^int *irq_iaddr_2;				\/\/ address of the second instruction we altered (for IRQ)$/;"	v
+irq_instruction1	kernel/include/hijackConst.h	/^int irq_instruction1;				\/\/ content of the first instruction we altered (for IRQ)$/;"	v
+irq_instruction2	kernel/include/hijackConst.h	/^int irq_instruction2;				\/\/ content of the second instruction we altered (for IRQ)$/;"	v
+isalnum	kernel/include/ctype.h	/^INLINE int __attribute__((const)) isalnum(int c) $/;"	f
+isalnum	tasks/libc/include/ctype.h	/^INLINE int __attribute__((const)) isalnum(int c) $/;"	f
+isalpha	kernel/include/ctype.h	/^INLINE int __attribute__((const)) isalpha(int c) $/;"	f
+isalpha	tasks/libc/include/ctype.h	/^INLINE int __attribute__((const)) isalpha(int c) $/;"	f
+isascii	kernel/include/ctype.h	/^INLINE int __attribute__((const)) isascii(int c)$/;"	f
+isascii	tasks/libc/include/ctype.h	/^INLINE int __attribute__((const)) isascii(int c)$/;"	f
+iscntrl	kernel/include/ctype.h	/^INLINE int __attribute__((const)) iscntrl(int c) $/;"	f
+iscntrl	tasks/libc/include/ctype.h	/^INLINE int __attribute__((const)) iscntrl(int c) $/;"	f
+isdigit	kernel/include/ctype.h	/^INLINE int __attribute__((const)) isdigit(int c) $/;"	f
+isdigit	tasks/libc/include/ctype.h	/^INLINE int __attribute__((const)) isdigit(int c) $/;"	f
+isdigit	tasks/libc/stdio/doprnt.c	141;"	d	file:
+isgraph	kernel/include/ctype.h	/^INLINE int __attribute__((const)) isgraph(int c) $/;"	f
+isgraph	tasks/libc/include/ctype.h	/^INLINE int __attribute__((const)) isgraph(int c) $/;"	f
+islower	kernel/include/ctype.h	/^INLINE int __attribute__((const)) islower(int c) $/;"	f
+islower	tasks/libc/include/ctype.h	/^INLINE int __attribute__((const)) islower(int c) $/;"	f
+isprint	kernel/include/ctype.h	/^INLINE int __attribute__((const)) isprint(int c) $/;"	f
+isprint	tasks/libc/include/ctype.h	/^INLINE int __attribute__((const)) isprint(int c) $/;"	f
+ispunct	kernel/include/ctype.h	/^INLINE int __attribute__((const)) ispunct(int c) $/;"	f
+ispunct	tasks/libc/include/ctype.h	/^INLINE int __attribute__((const)) ispunct(int c) $/;"	f
+isspace	kernel/include/ctype.h	/^INLINE int __attribute__((const)) isspace(int c) $/;"	f
+isspace	tasks/libc/include/ctype.h	/^INLINE int __attribute__((const)) isspace(int c) $/;"	f
+isupper	kernel/include/ctype.h	/^INLINE int __attribute__((const)) isupper(int c) $/;"	f
+isupper	tasks/libc/include/ctype.h	/^INLINE int __attribute__((const)) isupper(int c) $/;"	f
+isxdigit	kernel/include/ctype.h	/^INLINE int __attribute__((const)) isxdigit(int c) $/;"	f
+isxdigit	tasks/libc/include/ctype.h	/^INLINE int __attribute__((const)) isxdigit(int c) $/;"	f
+kernel_tcb	kernel/main.c	/^tcb_t kernel_tcb[4]; $/;"	v
+kmain	kernel/main.c	/^int kmain(int argc __attribute__((unused)), char** argv  __attribute__((unused)), uint32_t table)$/;"	f
+kstack	kernel/include/task.h	/^	uint32_t         kstack[OS_KSTACK_SIZE\/sizeof(uint32_t)] $/;"	m	struct:tcb
+kstack_high	kernel/include/task.h	/^	uint32_t         kstack_high[0];$/;"	m	struct:tcb
+label1	kernel/Usermode.S	/^label1:$/;"	l
+label2	kernel/Usermode.S	/^label2:$/;"	l
+label3	kernel/Usermode.S	/^label3:$/;"	l
+label4	kernel/Usermode.S	/^label4: $/;"	l
+lambda	kernel/include/task.h	/^	task_fun_t    lambda;      \/**< The root function of this task *\/$/;"	m	struct:task
+lambda	tasks/libc/include/task.h	/^	task_fun_t    lambda;      \/**< The root function of this task *\/$/;"	m	struct:task
+len	tasks/libc/stdio/sprintf.c	/^	int len;$/;"	m	struct:sprintf_state	file:
+loop	tasks/libc/crt0.S	/^  loop:$/;"	l
+lr	kernel/include/task.h	/^	void*    lr;$/;"	m	struct:sched_context
+main	tasks/dagger/dagger.c	/^int main(int argc, char** argv)$/;"	f
+main	tasks/hello/hello.c	/^int main(int argc, char** argv)$/;"	f
+main	tasks/rot13/rot13.c	/^int main(int argc,char* argv[]) {        $/;"	f
+main	tasks/typo/typo.c	/^int main(int argc, char** argv)$/;"	f
+max	tasks/libc/stdio/sprintf.c	/^	int max;$/;"	m	struct:sprintf_state	file:
+memcmp	tasks/libc/string/memcmp.c	/^int memcmp(const void *s1v, const void *s2v, size_t size)$/;"	f
+memcpy	tasks/libc/string/memmove.c	/^void* memcpy(void* dest, const void* src, size_t count)$/;"	f
+memmove	tasks/libc/string/memmove.c	/^void* memmove(void* dest, const void* src, size_t count)$/;"	f
+memset	tasks/libc/string/memset.c	/^void* memset(void *tov, int c, size_t len)$/;"	f
+mutex	kernel/include/lock.h	/^struct mutex$/;"	s
+mutex_create	kernel/lock/mutex.c	/^int mutex_create(void)$/;"	f
+mutex_init	kernel/lock/mutex.c	/^void mutex_init()$/;"	f
+mutex_lock	kernel/lock/mutex.c	/^int mutex_lock(int mutex  __attribute__((unused)))$/;"	f
+mutex_t	kernel/include/lock.h	/^typedef struct mutex mutex_t;$/;"	t	typeref:struct:mutex
+mutex_unlock	kernel/lock/mutex.c	/^int mutex_unlock(int mutex  __attribute__((unused)))$/;"	f
+native_prio	kernel/include/task.h	/^	uint8_t          native_prio;        \/**< The native priority of the task without escalation *\/$/;"	m	struct:tcb
+next_match	kernel/device.c	/^	unsigned long   next_match;$/;"	m	struct:dev	file:
+offsetof	kernel/include/types.h	24;"	d
+offsetof	tasks/libc/include/bits/types.h	16;"	d
+pHolding_Tcb	kernel/include/lock.h	/^	tcb_t*	pHolding_Tcb;	\/* who are using this mutex *\/$/;"	m	struct:mutex
+pSleep_queue	kernel/include/lock.h	/^	tcb_t*	pSleep_queue;	\/* list of applications waiting for this mutex *\/$/;"	m	struct:mutex
+panic	kernel/assert.c	/^void panic(const char* fmt, ...)$/;"	f
+panic	tasks/dagger/dagger.c	/^void panic(const char* str)$/;"	f
+printf	tasks/libc/stdio/printf.c	/^printf(const char *fmt, ...)$/;"	f
+printf_char	tasks/libc/stdio/printf.c	/^static void printf_char(char *arg, int c)$/;"	f	file:
+printf_state	tasks/libc/stdio/printf.c	/^struct printf_state {$/;"	s	file:
+printnum	tasks/libc/stdio/doprnt.c	/^static void printnum(unsigned long u, int base, void (*putc)(char*, int), char *putc_arg)$/;"	f	file:
+printnum_16	tasks/libc/stdio/doprnt.c	/^static void printnum_16(unsigned long u, void (*putc)(char*, int), char *putc_arg)$/;"	f	file:
+prio_unmap_table	kernel/sched/run_queue.c	/^static uint8_t prio_unmap_table[]  __attribute__((unused)) =$/;"	v	file:
+putchar	tasks/libc/stdio/putchar.c	/^int putchar(int c)$/;"	f
+puts	tasks/libc/stdio/puts.c	/^int puts(const char *s)$/;"	f
+r0	kernel/include/arm/exception.h	/^	uint32_t r0;$/;"	m	struct:ex_context
+r1	kernel/include/arm/exception.h	/^	uint32_t r1;$/;"	m	struct:ex_context
+r10	kernel/include/arm/exception.h	/^	uint32_t r10;$/;"	m	struct:ex_context
+r10	kernel/include/task.h	/^	uint32_t r10;$/;"	m	struct:sched_context
+r11	kernel/include/arm/exception.h	/^	uint32_t r11;$/;"	m	struct:ex_context
+r11	kernel/include/task.h	/^	uint32_t r11;$/;"	m	struct:sched_context
+r12	kernel/include/arm/exception.h	/^	uint32_t r12;$/;"	m	struct:ex_context
+r2	kernel/include/arm/exception.h	/^	uint32_t r2;$/;"	m	struct:ex_context
+r3	kernel/include/arm/exception.h	/^	uint32_t r3;$/;"	m	struct:ex_context
+r4	kernel/include/arm/exception.h	/^	uint32_t r4;$/;"	m	struct:ex_context
+r4	kernel/include/task.h	/^	uint32_t r4;$/;"	m	struct:sched_context
+r5	kernel/include/arm/exception.h	/^	uint32_t r5;$/;"	m	struct:ex_context
+r5	kernel/include/task.h	/^	uint32_t r5;$/;"	m	struct:sched_context
+r6	kernel/include/arm/exception.h	/^	uint32_t r6;$/;"	m	struct:ex_context
+r6	kernel/include/task.h	/^	uint32_t r6;$/;"	m	struct:sched_context
+r7	kernel/include/arm/exception.h	/^	uint32_t r7;$/;"	m	struct:ex_context
+r7	kernel/include/task.h	/^	uint32_t r7;$/;"	m	struct:sched_context
+r8	kernel/include/arm/exception.h	/^	uint32_t r8;$/;"	m	struct:ex_context
+r8	kernel/include/task.h	/^	uint32_t r8;$/;"	m	struct:sched_context
+r9	kernel/include/arm/exception.h	/^	uint32_t r9;$/;"	m	struct:ex_context
+r9	kernel/include/task.h	/^	uint32_t r9;$/;"	m	struct:sched_context
+raise	kernel/raise.c	/^void raise(void)$/;"	f
+raise	tasks/libc/raise.c	/^void raise(void)$/;"	f
+rand	tasks/libc/stdlib/rand.c	/^rand(void)$/;"	f
+read	tasks/libc/swi/read.S	/^read:        $/;"	l
+read_cpsr	kernel/include/arm/psr.h	/^INLINE uint32_t read_cpsr(void)$/;"	f
+read_syscall	kernel/syscall/io.c	/^ssize_t read_syscall(int fd __attribute__((unused)), char *buf __attribute__((unused)), size_t count __attribute__((unused)))$/;"	f
+readchar	tasks/libc/stdio/sscanf.c	/^static int readchar(void* arg)$/;"	f	file:
+reg_clear	kernel/include/arm/reg.h	/^INLINE void reg_clear(size_t addr, uint32_t flags)$/;"	f
+reg_read	kernel/include/arm/reg.h	/^INLINE uint32_t reg_read(size_t addr)$/;"	f
+reg_set	kernel/include/arm/reg.h	/^INLINE void reg_set(size_t addr, uint32_t flags)$/;"	f
+reg_write	kernel/include/arm/reg.h	/^INLINE void reg_write(size_t addr, uint32_t data)$/;"	f
+restore	kernel/restore.S	/^restore:$/;"	l
+rr8	kernel/global.c	/^uint32_t rr8 = 0;$/;"	v
+run_bits	kernel/sched/run_queue.c	/^static uint8_t run_bits[OS_MAX_TASKS\/8] __attribute__((unused));$/;"	v	file:
+run_list	kernel/sched/run_queue.c	/^static tcb_t* run_list[OS_MAX_TASKS]  __attribute__((unused));$/;"	v	file:
+runqueue_add	kernel/sched/run_queue.c	/^void runqueue_add(tcb_t* tcb  __attribute__((unused)), uint8_t prio  __attribute__((unused)))$/;"	f
+runqueue_init	kernel/sched/run_queue.c	/^void runqueue_init(void)$/;"	f
+runqueue_remove	kernel/sched/run_queue.c	/^tcb_t* runqueue_remove(uint8_t prio  __attribute__((unused)))$/;"	f
+savechar	tasks/libc/stdio/sprintf.c	/^static void savechar(char *arg, int c)$/;"	f	file:
+sched_context	kernel/include/task.h	/^struct sched_context$/;"	s
+sched_context_t	kernel/include/task.h	/^typedef volatile struct sched_context sched_context_t;$/;"	t	typeref:struct:sched_context
+sched_init	kernel/sched/sched.c	/^void sched_init(task_t* main_task  __attribute__((unused)))$/;"	f
+seed	tasks/libc/stdlib/rand.c	/^static unsigned seed[2];$/;"	v	file:
+setup	kernel/irq.c	/^void setup() {$/;"	f
+size_t	kernel/include/types.h	/^typedef unsigned long       size_t;$/;"	t
+size_t	tasks/libc/include/bits/types.h	/^typedef unsigned long       size_t;$/;"	t
+sleep_queue	kernel/device.c	/^	tcb_t* sleep_queue;$/;"	m	struct:dev	file:
+sleep_queue	kernel/include/task.h	/^	volatile struct tcb* sleep_queue;    \/**< If this task is asleep, this is its sleep queue link *\/$/;"	m	struct:tcb	typeref:struct:tcb::tcb
+sleep_syscall	kernel/syscall/time.c	/^void sleep_syscall(unsigned long msec  __attribute__((unused)))$/;"	f
+snprintf	tasks/libc/stdio/sprintf.c	/^int snprintf(char *s, size_t size, const char *fmt, ...)$/;"	f
+sp	kernel/include/task.h	/^	void*    sp;$/;"	m	struct:sched_context
+sprintf	tasks/libc/stdio/sprintf.c	/^int sprintf(char *s, const char *fmt, ...)$/;"	f
+sprintf_state	tasks/libc/stdio/sprintf.c	/^struct sprintf_state {$/;"	s	file:
+srand	tasks/libc/stdlib/rand.c	/^srand(unsigned new_seed)$/;"	f
+sscanf	tasks/libc/stdio/sscanf.c	/^int sscanf(const char *s, const char *fmt, ...)$/;"	f
+ssize_t	kernel/include/types.h	/^typedef long                ssize_t;$/;"	t
+ssize_t	tasks/libc/include/bits/types.h	/^typedef long                ssize_t;$/;"	t
+stack_pos	kernel/include/task.h	/^	void*         stack_pos;   \/**< The starting position of the task's sp *\/$/;"	m	struct:task
+stack_pos	tasks/libc/include/task.h	/^	void*         stack_pos;   \/**< The starting position of the task's sp *\/$/;"	m	struct:task
+strcat	tasks/libc/string/strcat.c	/^char* strcat(char* s, const char* add)$/;"	f
+strchr	tasks/libc/string/strchr.c	/^char *strchr(const char *s, int c)$/;"	f
+strcmp	tasks/libc/string/strcmp.c	/^int strcmp(const char *s1, const char *s2)$/;"	f
+strcpy	tasks/libc/string/strcpy.c	/^char* strcpy(char *to, const char *from)$/;"	f
+strcspn	tasks/libc/string/strcspn.c	/^size_t strcspn(const char *s1, const char *s2)$/;"	f
+strlen	tasks/libc/string/strlen.c	/^size_t strlen(const char *string)$/;"	f
+strncat	tasks/libc/string/strncat.c	/^char* strncat(char *dst, const char *src, size_t n)$/;"	f
+strncmp	tasks/libc/string/strncmp.c	/^strncmp(const char *s1, const char *s2, size_t n)$/;"	f
+strncpy	tasks/libc/string/strncpy.c	/^char* strncpy(char *to, const char *from, size_t count)$/;"	f
+strpbrk	tasks/libc/string/strpbrk.c	/^char* strpbrk(const char* s1, const char* s2)$/;"	f
+strrchr	tasks/libc/string/strrchr.c	/^char* strrchr(const char *s, int c)$/;"	f
+strspn	tasks/libc/string/strspn.c	/^size_t strspn(const char *s1, const char *s2)$/;"	f
+strstr	tasks/libc/string/strstr.c	/^char *strstr(const char *haystack, const char *needle)$/;"	f
+strtol	tasks/libc/stdlib/strtol.c	/^long strtol(const char *p, char **out_p, int base)$/;"	f
+strtoul	tasks/libc/stdlib/strtoul.c	/^unsigned long strtoul(const char *p, char **out_p, int base)$/;"	f
+sum_region	kernel/math.c	/^unsigned int sum_region(unsigned int* buf, size_t num_words)$/;"	f
+system_tcb	kernel/sched/sched.c	/^tcb_t system_tcb[OS_MAX_TASKS]; \/*allocate memory for system TCBs *\/$/;"	v
+system_time	kernel/global.c	/^unsigned int system_time = 0;$/;"	v
+task	kernel/include/task.h	/^struct task$/;"	s
+task	tasks/libc/include/task.h	/^struct task$/;"	s
+task_create	kernel/syscall/proc.c	/^int task_create(task_t* tasks, size_t num_tasks)$/;"	f
+task_exchange	kernel/syscall/proc.c	/^void task_exchange (task_t * task1,task_t * task2) $/;"	f
+task_fun_t	kernel/include/task.h	/^typedef void (*task_fun_t)(void*);$/;"	t
+task_fun_t	tasks/libc/include/task.h	/^typedef void (*task_fun_t)(void*);$/;"	t
+task_t	kernel/include/task.h	/^typedef struct task task_t;$/;"	t	typeref:struct:task
+task_t	tasks/libc/include/task.h	/^typedef struct task task_t;$/;"	t	typeref:struct:task
+tcb	kernel/include/task.h	/^struct tcb$/;"	s
+tcb_t	kernel/include/task.h	/^typedef volatile struct tcb tcb_t;$/;"	t	typeref:struct:tcb
+time_syscall	kernel/syscall/time.c	/^unsigned long time_syscall(void)$/;"	f
+tolower	kernel/include/ctype.h	/^INLINE int __attribute__((const)) tolower(int c) $/;"	f
+tolower	tasks/libc/include/ctype.h	/^INLINE int __attribute__((const)) tolower(int c) $/;"	f
+toupper	kernel/include/ctype.h	/^INLINE int __attribute__((const)) toupper(int c) $/;"	f
+toupper	tasks/libc/include/ctype.h	/^INLINE int __attribute__((const)) toupper(int c) $/;"	f
+uint16_t	kernel/include/types.h	/^typedef unsigned short      uint16_t;$/;"	t
+uint16_t	tasks/libc/include/bits/types.h	/^typedef unsigned short      uint16_t;$/;"	t
+uint32_t	kernel/include/types.h	/^typedef unsigned int        uint32_t;$/;"	t
+uint32_t	tasks/libc/include/bits/types.h	/^typedef unsigned int        uint32_t;$/;"	t
+uint64_t	kernel/include/types.h	/^typedef unsigned long long  uint64_t;$/;"	t
+uint64_t	tasks/libc/include/bits/types.h	/^typedef unsigned long long  uint64_t;$/;"	t
+uint8_t	kernel/include/types.h	/^typedef unsigned char       uint8_t;$/;"	t
+uint8_t	tasks/libc/include/bits/types.h	/^typedef unsigned char       uint8_t;$/;"	t
+uintptr_t	kernel/include/types.h	/^typedef uint32_t            uintptr_t;$/;"	t
+uintptr_t	tasks/libc/include/bits/types.h	/^typedef uint32_t            uintptr_t;$/;"	t
+unchar	tasks/libc/stdio/sscanf.c	/^static void unchar(int c __attribute__((unused)), void* arg)$/;"	f	file:
+va_arg	kernel/include/stdarg.h	12;"	d
+va_arg	tasks/libc/include/stdarg.h	12;"	d
+va_copy	kernel/include/stdarg.h	14;"	d
+va_copy	tasks/libc/include/stdarg.h	14;"	d
+va_end	kernel/include/stdarg.h	13;"	d
+va_end	tasks/libc/include/stdarg.h	13;"	d
+va_list	kernel/include/stdarg.h	/^typedef __builtin_va_list va_list;$/;"	t
+va_list	tasks/libc/include/stdarg.h	/^typedef __builtin_va_list va_list;$/;"	t
+va_start	kernel/include/stdarg.h	11;"	d
+va_start	tasks/libc/include/stdarg.h	11;"	d
+valid_addr	kernel/memcheck.c	/^int valid_addr(const void* start, size_t count, uintptr_t base, uintptr_t bound)$/;"	f
+value	kernel/global.c	/^int value = 0 ;$/;"	v
+vprintf	tasks/libc/stdio/printf.c	/^int vprintf(const char *fmt, va_list args)$/;"	f
+vsnprintf	tasks/libc/stdio/sprintf.c	/^int vsnprintf(char *s, size_t size, const char *fmt, va_list args)$/;"	f
+vsprintf	tasks/libc/stdio/sprintf.c	/^int vsprintf(char *s, const char *fmt, va_list args)$/;"	f
+vsscanf	tasks/libc/stdio/sscanf.c	/^int vsscanf(const char* s, const char* fmt, va_list args)$/;"	f
+write	tasks/libc/swi/write.S	/^write:        $/;"	l
+write_syscall	kernel/syscall/io.c	/^ssize_t write_syscall(int fd  __attribute__((unused)), const char *buf  __attribute__((unused)), size_t count  __attribute__((unused)))$/;"	f
