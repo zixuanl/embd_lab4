@@ -21,7 +21,7 @@
 #include <exports.h> // temp
 //#endif
 
-mutex_t gtMutex[OS_NUM_MUTEX];
+
 
 void mutex_init()
 {
@@ -36,8 +36,8 @@ void mutex_init()
 
 int mutex_create_syscall(void)
 {
-	puts("mutex_create\n");
-	mutex_init();
+	//puts("mutex_create\n");
+	//mutex_init();
 	int index;
 	for (index = 0; index < OS_NUM_MUTEX; index++) {
 		if (gtMutex[index].bAvailable == 1) {
@@ -50,7 +50,7 @@ int mutex_create_syscall(void)
 
 int mutex_lock_syscall(int mutex  __attribute__((unused)))
 {
-	printf("mutex_lock, %d\n", mutex);
+	//printf("mutex_lock, %d\n", mutex);
 	// if mutex invalid
 	if (mutex >= OS_NUM_MUTEX || gtMutex[mutex].bAvailable == 1) {
 		return EINVAL;
@@ -72,10 +72,10 @@ int mutex_lock_syscall(int mutex  __attribute__((unused)))
 				((*tmp)->sleep_queue) = (void *)0;
 				break;
 			}
-			tmp = &((*tmp)->sleep_queue);
+			tmp = (tcb_t **)&((*tmp)->sleep_queue);
 		}
-		printf("blocked!!!!!!!!!\n");
-		printf("mutex holding tcb: %d\n", (gtMutex[mutex].pHolding_Tcb)->native_prio);
+		//printf("blocked!!!!!!!!!\n");
+		//printf("mutex holding tcb: %d\n", (gtMutex[mutex].pHolding_Tcb)->native_prio);
 		dispatch_save();
 	}
 
@@ -84,13 +84,14 @@ int mutex_lock_syscall(int mutex  __attribute__((unused)))
 	gtMutex[mutex].pHolding_Tcb = get_cur_tcb();
 	
 	//printf("mutex holding tcb: %d\n", (gtMutex[mutex].pHolding_Tcb)->native_prio);
-	printf("mutex sleep queue\n");
+	//printf("mutex sleep queue\n");
+	/*
 	tcb_t* tmp = gtMutex[mutex].pSleep_queue;
 	while (tmp != (void *)0) {
 		printf("sleep %d\n", tmp->native_prio);
 		tmp = tmp->sleep_queue;
 	}
-
+	*/
 	return 0;
 
 }
@@ -119,7 +120,7 @@ int mutex_unlock_syscall(int mutex  __attribute__((unused)))
 		gtMutex[mutex].pHolding_Tcb = (void *)0;
 		
 		// test
-		printf("mutex_unlock, %d\n", mutex);
+		//printf("mutex_unlock, %d\n", mutex);
 		//printf("mutex holding tcb: %d\n", (gtMutex[mutex].pHolding_Tcb)->native_prio);
 
 	}
@@ -130,13 +131,15 @@ int mutex_unlock_syscall(int mutex  __attribute__((unused)))
 		runqueue_add(nextTcb, nextTcb->native_prio);
 		//printf("mutex_unlock, change to %d\n", mutex);
 
-		printf("mutex holding tcb: %d\n", (gtMutex[mutex].pHolding_Tcb)->native_prio);
-		printf("mutex sleep queue\n");
+		//printf("mutex holding tcb: %d\n", (gtMutex[mutex].pHolding_Tcb)->native_prio);
+		//printf("mutex sleep queue\n");
+		/*
 		tcb_t* tmp = gtMutex[mutex].pSleep_queue;
 		while (tmp != (void *)0) {
 			printf("sleep %d\n", tmp->native_prio);
 			tmp = tmp->sleep_queue;	
 		}
+		*/
 	}
 	return 0;
 }

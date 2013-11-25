@@ -1,0 +1,38 @@
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/lock/mutex.o:  \
+ /home/tianyihuang/Documents/18342/embd_lab4/kernel/lock/mutex.c \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/lock.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/types.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/task.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/config.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/sched.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/bits/errno.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/arm/psr.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/inline.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/arm/exception.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/uboot/include/exports.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/stdarg.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/uboot/include/_exports.h
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/lock.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/types.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/task.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/config.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/sched.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/bits/errno.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/arm/psr.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/inline.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/arm/exception.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/uboot/include/exports.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/stdarg.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/uboot/include/_exports.h:

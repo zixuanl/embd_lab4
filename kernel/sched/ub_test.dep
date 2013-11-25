@@ -1,0 +1,14 @@
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/sched/ub_test.o:  \
+ /home/tianyihuang/Documents/18342/embd_lab4/kernel/sched/ub_test.c \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/sched.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/task.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/types.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/config.h
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/sched.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/task.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/types.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/config.h:

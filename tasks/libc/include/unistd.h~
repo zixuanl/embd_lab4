@@ -13,10 +13,10 @@
 #include <sys/types.h>
 
 #define NUM_DEVICES 4
-#define PERIOD_DEV0 100
-#define PERIOD_DEV1 200
-#define PERIOD_DEV2 500
-#define PERIOD_DEV3 50
+#define PERIOD_DEV0 50
+#define PERIOD_DEV1 100
+#define PERIOD_DEV2 200
+#define PERIOD_DEV3 500
 
 ssize_t read(int fd, void *buf, size_t count);
 ssize_t write(int fd, const void *buf, size_t count);

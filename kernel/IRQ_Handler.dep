@@ -1,0 +1,8 @@
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/IRQ_Handler.o:  \
+ /home/tianyihuang/Documents/18342/embd_lab4/kernel/IRQ_Handler.S \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/asm.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/arm/psr.h
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/asm.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/arm/psr.h:

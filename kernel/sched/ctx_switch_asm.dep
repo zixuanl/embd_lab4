@@ -1,0 +1,9 @@
+ \
+ /home/tianyihuang/Documents/18342/embd_lab4/kernel/sched/ctx_switch_asm.o:  \
+ /home/tianyihuang/Documents/18342/embd_lab4/kernel/sched/ctx_switch_asm.S \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/asm.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/arm/psr.h
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/asm.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/arm/psr.h:

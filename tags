@@ -516,7 +516,7 @@ dispatch_sleep	kernel/sched/ctx_switch.c	/^void dispatch_sleep(void)$/;"	f
 dummy	uboot/stubs.c	/^static void __attribute__((used, naked)) dummy(void)$/;"	f	file:
 enable_interrupts	kernel/include/arm/exception.h	/^INLINE void enable_interrupts(void)$/;"	f
 errno	tasks/libc/stdlib/errno.c	/^int errno = 0;$/;"	v
-event_wait	kernel/syscall/proc.c	/^int event_wait(unsigned int dev)$/;"	f
+event_wait_syscall	kernel/syscall/proc.c	/^int event_wait_syscall(unsigned int dev)$/;"	f
 ex_context	kernel/include/arm/exception.h	/^struct ex_context$/;"	s
 ex_context_t	kernel/include/arm/exception.h	/^typedef struct ex_context ex_context_t;$/;"	t	typeref:struct:ex_context
 flush	tasks/libc/stdio/printf.c	/^static void flush(struct printf_state *state)$/;"	f	file:
@@ -609,11 +609,12 @@ memcpy	tasks/libc/string/memmove.c	/^void* memcpy(void* dest, const void* src, s
 memmove	tasks/libc/string/memmove.c	/^void* memmove(void* dest, const void* src, size_t count)$/;"	f
 memset	tasks/libc/string/memset.c	/^void* memset(void *tov, int c, size_t len)$/;"	f
 mutex	kernel/include/lock.h	/^struct mutex$/;"	s
-mutex_create	kernel/lock/mutex.c	/^int mutex_create(void)$/;"	f
+mutex1	tasks/dagger/dagger.c	/^int mutex1;$/;"	v
+mutex_create_syscall	kernel/lock/mutex.c	/^int mutex_create_syscall(void)$/;"	f
 mutex_init	kernel/lock/mutex.c	/^void mutex_init()$/;"	f
-mutex_lock	kernel/lock/mutex.c	/^int mutex_lock(int mutex  __attribute__((unused)))$/;"	f
+mutex_lock_syscall	kernel/lock/mutex.c	/^int mutex_lock_syscall(int mutex  __attribute__((unused)))$/;"	f
 mutex_t	kernel/include/lock.h	/^typedef struct mutex mutex_t;$/;"	t	typeref:struct:mutex
-mutex_unlock	kernel/lock/mutex.c	/^int mutex_unlock(int mutex  __attribute__((unused)))$/;"	f
+mutex_unlock_syscall	kernel/lock/mutex.c	/^int mutex_unlock_syscall(int mutex  __attribute__((unused)))$/;"	f
 native_prio	kernel/include/task.h	/^	uint8_t          native_prio;        \/**< The native priority of the task without escalation *\/$/;"	m	struct:tcb
 next_match	kernel/device.c	/^	unsigned long   next_match;$/;"	m	struct:dev	file:
 offsetof	kernel/include/types.h	24;"	d
@@ -710,7 +711,7 @@ system_tcb	kernel/sched/sched.c	/^tcb_t system_tcb[OS_MAX_TASKS]; \/*allocate me
 system_time	kernel/global.c	/^unsigned int system_time = 0;$/;"	v
 task	kernel/include/task.h	/^struct task$/;"	s
 task	tasks/libc/include/task.h	/^struct task$/;"	s
-task_create	kernel/syscall/proc.c	/^int task_create(task_t* tasks, size_t num_tasks)$/;"	f
+task_create_syscall	kernel/syscall/proc.c	/^int task_create_syscall(task_t* tasks, size_t num_tasks)$/;"	f
 task_exchange	kernel/syscall/proc.c	/^void task_exchange (task_t * task1,task_t * task2) $/;"	f
 task_fun_t	kernel/include/task.h	/^typedef void (*task_fun_t)(void*);$/;"	t
 task_fun_t	tasks/libc/include/task.h	/^typedef void (*task_fun_t)(void*);$/;"	t

@@ -14,6 +14,7 @@
 #include <device.h>
 #include <assert.h>
 #include <hijack.h>
+#include <lock.h>
 
 uint32_t global_data;
 tcb_t kernel_tcb[4]; 

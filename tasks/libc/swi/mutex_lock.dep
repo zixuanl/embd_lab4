@@ -1,0 +1,8 @@
+/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/swi/mutex_lock.o:  \
+ /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/swi/mutex_lock.S \
+  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/asm.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/bits/swi.h
+
+/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/asm.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/bits/swi.h:

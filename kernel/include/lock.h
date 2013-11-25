@@ -33,6 +33,8 @@ struct cond
 };
 typedef struct cond cond_t;
 
+
+
 void mutex_init(void);	/* a function for initiating mutexes */
 int mutex_create_syscall(void);
 int mutex_lock_syscall(int mutex);

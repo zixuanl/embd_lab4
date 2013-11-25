@@ -37,7 +37,7 @@ void mutex_init()
 int mutex_create_syscall(void)
 {
 	//puts("mutex_create\n");
-	mutex_init();
+	//mutex_init();
 	int index;
 	for (index = 0; index < OS_NUM_MUTEX; index++) {
 		if (gtMutex[index].bAvailable == 1) {
@@ -72,7 +72,7 @@ int mutex_lock_syscall(int mutex  __attribute__((unused)))
 				((*tmp)->sleep_queue) = (void *)0;
 				break;
 			}
-			tmp = &((*tmp)->sleep_queue);
+			tmp = (tcb_t **)&((*tmp)->sleep_queue);
 		}
 		//printf("blocked!!!!!!!!!\n");
 		//printf("mutex holding tcb: %d\n", (gtMutex[mutex].pHolding_Tcb)->native_prio);

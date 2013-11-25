@@ -1,0 +1,35 @@
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/syscall/sys.o:  \
+ /home/tianyihuang/Documents/18342/embd_lab4/kernel/syscall/sys.c \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/bits/swi.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/bits/fileno.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/bits/errno.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/syscall.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/types.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/task.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/config.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/lock.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/uboot/include/exports.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/stdarg.h \
+  /home/tianyihuang/Documents/18342/embd_lab4/uboot/include/_exports.h
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/bits/swi.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/bits/fileno.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/bits/errno.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/syscall.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/types.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/task.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/config.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/lock.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/uboot/include/exports.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/stdarg.h:
+
+/home/tianyihuang/Documents/18342/embd_lab4/uboot/include/_exports.h:

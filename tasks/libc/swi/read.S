@@ -18,14 +18,15 @@
         .global read    
 read:        
         stmfd   sp!, {r4-r11}   @ as a called routine of APCS, preserve r4 - r11 (but in fact we won't use them)
-        ldr     r4, [sp, #32]   @ transfer from APCS to OABI, load the argument #5 - argument #7 to r4 - r6      
-        ldr     r5, [sp, #36]         
-        ldr     r6, [sp, #40]         
+	mov     r4,  sp
+	mov	r5,  lr        
         swi     READ_SWI        @ use syscall read, argumens r0, r1, r2 are used
+	mov	lr,  r5
+	mov     sp,  r4 
         movs    r1, r0          @ check return value  
         movmi   r0, #-1         @ if r0 < 0, r0 = -1  
         ldrmi   r2, =errno      @ load the address of global variable errno                     
         rsbmi   r3, r1, #0      @ set errno = -r0     
         strmi   r3, [r2]        @ store the value back to errno                    
         ldmfd   sp!, {r4-r11}   @ reload the preserved registers
-        bx      lr              @ return 
+        bx      lr              @ return 	mov     r4,  sp
