@@ -1,8 +1,8 @@
-/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/swi/read.o:  \
- /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/swi/read.S \
-  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/asm.h \
-  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/bits/swi.h
+/home/liuzixuan/Documents/embd_lab4/tasks/libc/swi/read.o:  \
+ /home/liuzixuan/Documents/embd_lab4/tasks/libc/swi/read.S \
+  /home/liuzixuan/Documents/embd_lab4/tasks/libc/include/asm.h \
+  /home/liuzixuan/Documents/embd_lab4/tasks/libc/include/bits/swi.h
 
-/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/asm.h:
+/home/liuzixuan/Documents/embd_lab4/tasks/libc/include/asm.h:
 
-/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/bits/swi.h:
+/home/liuzixuan/Documents/embd_lab4/tasks/libc/include/bits/swi.h:

@@ -1,11 +1,11 @@
-/home/tianyihuang/Documents/18342/embd_lab4/kernel/arm/reg.o:  \
- /home/tianyihuang/Documents/18342/embd_lab4/kernel/arm/reg.c \
-  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/types.h \
-  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/arm/reg.h \
-  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/inline.h
+/home/liuzixuan/Documents/embd_lab4/kernel/arm/reg.o:  \
+ /home/liuzixuan/Documents/embd_lab4/kernel/arm/reg.c \
+  /home/liuzixuan/Documents/embd_lab4/kernel/include/types.h \
+  /home/liuzixuan/Documents/embd_lab4/kernel/include/arm/reg.h \
+  /home/liuzixuan/Documents/embd_lab4/kernel/include/inline.h
 
-/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/types.h:
+/home/liuzixuan/Documents/embd_lab4/kernel/include/types.h:
 
-/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/arm/reg.h:
+/home/liuzixuan/Documents/embd_lab4/kernel/include/arm/reg.h:
 
-/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/inline.h:
+/home/liuzixuan/Documents/embd_lab4/kernel/include/inline.h:

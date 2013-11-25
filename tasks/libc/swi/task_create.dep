@@ -1,8 +1,14 @@
-/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/swi/task_create.o:  \
- /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/swi/task_create.S \
-  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/asm.h \
-  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/bits/swi.h
+/home/liuzixuan/Documents/embd_lab4/tasks/libc/swi/task_create.o:  \
+ /home/liuzixuan/Documents/embd_lab4/tasks/libc/swi/task_create.S \
+  /home/liuzixuan/Documents/embd_lab4/tasks/libc/include/asm.h \
+  /home/liuzixuan/Documents/embd_lab4/tasks/libc/include/bits/swi.h \
+  /home/liuzixuan/Documents/embd_lab4/tasks/libc/include/errno.h \
+  /home/liuzixuan/Documents/embd_lab4/tasks/libc/include/bits/errno.h
 
-/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/asm.h:
+/home/liuzixuan/Documents/embd_lab4/tasks/libc/include/asm.h:
 
-/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/bits/swi.h:
+/home/liuzixuan/Documents/embd_lab4/tasks/libc/include/bits/swi.h:
+
+/home/liuzixuan/Documents/embd_lab4/tasks/libc/include/errno.h:
+
+/home/liuzixuan/Documents/embd_lab4/tasks/libc/include/bits/errno.h:

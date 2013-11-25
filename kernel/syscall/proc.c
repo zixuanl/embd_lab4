@@ -58,11 +58,17 @@ int task_create_syscall(task_t* tasks, size_t num_tasks)
 	size_t min;
 	uint32_t tmp1;
 	uint32_t tmp2;
+	uint32_t tmp3;
 	float sum = 0;
 	
 	// error checking for num_tasks
 	if (num_tasks > OS_MAX_TASKS)
 		return EINVAL;
+	tmp3 = (uint32_t) tasks;
+
+	if ( tmp3 > USR_END_ADDR || tmp3 < USR_START_ADDR ) 
+		return EFAULT;
+
 
 	// test func addr and stack addr
 	for (i = 0; i < num_tasks; i++)
@@ -75,7 +81,7 @@ int task_create_syscall(task_t* tasks, size_t num_tasks)
 		 * a valid stack position should be between 0xa0010000 and 0xa3000000
 		 * a valid task_fun address should be between 0xa0000000 and 0xa3000000
 		 */
-		if ( tmp1 > USR_STACK || tmp1 < (LOAD_ADDR + 0x10000))
+		if ( tmp1 > USR_END_ADDR || tmp1 < USR_START_ADDR )
 			return EFAULT;
 		if ( tmp2 > USR_END_ADDR || tmp2 < USR_START_ADDR )
 			return EFAULT;

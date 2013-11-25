@@ -1,11 +1,11 @@
-/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/string/strrchr.o:  \
- /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/string/strrchr.c \
-  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/string.h \
-  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/sys/types.h \
-  /home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/bits/types.h
+/home/liuzixuan/Documents/embd_lab4/tasks/libc/string/strrchr.o:  \
+ /home/liuzixuan/Documents/embd_lab4/tasks/libc/string/strrchr.c \
+  /home/liuzixuan/Documents/embd_lab4/tasks/libc/include/string.h \
+  /home/liuzixuan/Documents/embd_lab4/tasks/libc/include/sys/types.h \
+  /home/liuzixuan/Documents/embd_lab4/tasks/libc/include/bits/types.h
 
-/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/string.h:
+/home/liuzixuan/Documents/embd_lab4/tasks/libc/include/string.h:
 
-/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/sys/types.h:
+/home/liuzixuan/Documents/embd_lab4/tasks/libc/include/sys/types.h:
 
-/home/tianyihuang/Documents/18342/embd_lab4/tasks/libc/include/bits/types.h:
+/home/liuzixuan/Documents/embd_lab4/tasks/libc/include/bits/types.h:

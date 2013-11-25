@@ -1,14 +1,14 @@
-/home/tianyihuang/Documents/18342/embd_lab4/uboot/stubs.o:  \
- /home/tianyihuang/Documents/18342/embd_lab4/uboot/stubs.c \
-  /home/tianyihuang/Documents/18342/embd_lab4/uboot/include/exports.h \
-  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/types.h \
-  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/stdarg.h \
-  /home/tianyihuang/Documents/18342/embd_lab4/uboot/include/_exports.h
+/home/liuzixuan/Documents/embd_lab4/uboot/stubs.o:  \
+ /home/liuzixuan/Documents/embd_lab4/uboot/stubs.c \
+  /home/liuzixuan/Documents/embd_lab4/uboot/include/exports.h \
+  /home/liuzixuan/Documents/embd_lab4/kernel/include/types.h \
+  /home/liuzixuan/Documents/embd_lab4/kernel/include/stdarg.h \
+  /home/liuzixuan/Documents/embd_lab4/uboot/include/_exports.h
 
-/home/tianyihuang/Documents/18342/embd_lab4/uboot/include/exports.h:
+/home/liuzixuan/Documents/embd_lab4/uboot/include/exports.h:
 
-/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/types.h:
+/home/liuzixuan/Documents/embd_lab4/kernel/include/types.h:
 
-/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/stdarg.h:
+/home/liuzixuan/Documents/embd_lab4/kernel/include/stdarg.h:
 
-/home/tianyihuang/Documents/18342/embd_lab4/uboot/include/_exports.h:
+/home/liuzixuan/Documents/embd_lab4/uboot/include/_exports.h:

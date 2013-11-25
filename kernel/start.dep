@@ -1,5 +1,5 @@
-/home/tianyihuang/Documents/18342/embd_lab4/kernel/start.o:  \
- /home/tianyihuang/Documents/18342/embd_lab4/kernel/start.S \
-  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/asm.h
+/home/liuzixuan/Documents/embd_lab4/kernel/start.o:  \
+ /home/liuzixuan/Documents/embd_lab4/kernel/start.S \
+  /home/liuzixuan/Documents/embd_lab4/kernel/include/asm.h
 
-/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/asm.h:
+/home/liuzixuan/Documents/embd_lab4/kernel/include/asm.h:

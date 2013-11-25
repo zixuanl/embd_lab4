@@ -1,8 +1,8 @@
-/home/tianyihuang/Documents/18342/embd_lab4/kernel/math.o:  \
- /home/tianyihuang/Documents/18342/embd_lab4/kernel/math.c \
-  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/types.h \
-  /home/tianyihuang/Documents/18342/embd_lab4/kernel/include/math.h
+/home/liuzixuan/Documents/embd_lab4/kernel/math.o:  \
+ /home/liuzixuan/Documents/embd_lab4/kernel/math.c \
+  /home/liuzixuan/Documents/embd_lab4/kernel/include/types.h \
+  /home/liuzixuan/Documents/embd_lab4/kernel/include/math.h
 
-/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/types.h:
+/home/liuzixuan/Documents/embd_lab4/kernel/include/types.h:
 
-/home/tianyihuang/Documents/18342/embd_lab4/kernel/include/math.h:
+/home/liuzixuan/Documents/embd_lab4/kernel/include/math.h:
